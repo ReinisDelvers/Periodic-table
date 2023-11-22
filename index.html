@@ -13,13 +13,27 @@
     </style>
 
     <style>
-      #cell1{
-        background-color: rgb(122, 113, 113);
-        width: 50px;
+      #blankCell{
+
       }
-      #cell2{
-        background-color: rgb(221, 174, 174);
-        width: 50px;
+      #blueCell{
+        background-color: rgb(0, 69, 126);
+      }
+      #redCell{
+        background-color: rgb(184, 67, 67);
+      }
+      #yellowCell{
+        background-color: rgb(207, 175, 58);
+      }
+      #greenCell{
+        background-color: rgb(31, 104, 35);
+      }
+      #groupCell{
+        background-color: rgb(255, 255, 255);
+      }
+      #groupCelltext{
+        text-align: center;
+        font-size: small;
       }
     </style>
   </head>
@@ -32,6 +46,26 @@
       <div class="row">
         <div class="col text-center" >
           <h1>ĶĪMISKO ELEMENTU PERIODISKĀ TABULA</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="row" style="height: 50px;">
+          </div>
+            <div id="groupCell" class="col">
+              <div id="groupCell" class="row">
+                <p>GRUPAS</p>
+              </div>
+              <div id="groupCell" class="row">
+                <div id="groupCell" class="row">
+                  <p>I A</p>
+                </div>
+                <div id="groupCell" class="row">
+                  <p>1</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -50,8 +84,8 @@
             <div id="blankCell" class="col">
 
             </div>
-            <div id="cell2" class="col">
-              H
+            <div id="blankCell" class="col">
+              <p></p>
             </div>
           </div>
         </div>
@@ -135,8 +169,8 @@
         </div>
         <div class="col-1">
           <div class="row" style="height: 50px;">
-            <div id="cell1" class="col">
-              He
+            <div id="blueCell" class="col">
+              <p>He</p>
             </div>
             <div id="blankCell" class="col">
 
