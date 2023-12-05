@@ -81,6 +81,54 @@
 
     </style>
 
+    <!--clickable grid-->
+    <style>
+      .clickable-cell {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+
+      }
+
+      .grid-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .popup-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .popup-iamge {
+        width: 500px;
+      }
+
+    </style>
+    
+    <script>
+      function showPopup(imageUrl) {
+        document.getElementById("popupImage").src = imageUrl;
+        document.getElementById("popup").style.display = "flex";
+      }
+
+      function hidePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+      
+    </script>
+
     <!--element colors-->
     
     <style>
@@ -265,2511 +313,2397 @@
     </div>
 
     <!--periodic table-->
-    <div class="periodic-table">
-      <div class="element selements c1 r1">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">1</div>
-          <div class="label">
-            <div class="symbol">H</div>
-            <div class="name">Hydrogen</div>
+    <div class="container--">
+      <div class="periodic-table">
+        <a href="#" class="element selements c1 r1 clickable-cell" onclick="showPopup('https://pediaa.com/wp-content/uploads/2023/06/hydrogen-atom.png');">
+          <div class="square">
+            <div class="atomic-number">1</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">H</div>
+              <div class="name">Hydrogen</div>
+            </div>
+            <div class="atomic-mass">1.008</div>
+            <ul class="atomic-weight">
+              <li>1</li>
+            </ul>
           </div>
-          <div class="atomic-mass">1.008</div>
-          <ul class="atomic-weight">
-            <li>1</li>
-          </ul>
+        </a>
+        <a href="#" class="element selements c18 r1 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQtcV1_17QJ_8kz2Qkid0m1SCD3jh0v5g-Kg&usqp=CAU');">
+          <div class="square">
+            <div class="atomic-number">2</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">He</div>
+              <div class="name">Helium</div>
+            </div>
+            <div class="atomic-mass">4.0026</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c1 r2 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/EftNGVICItV2yU86GE2JcAUY3V4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Limetal-5c699dfdc9e77c00014763c6.JPG')">
+          <div class="square">
+            <div class="model">
+            </div>
+            <div class="atomic-number">3</div>
+            <div class="label">
+              <div class="symbol">Li</div>
+              <div class="name">Lithium</div>
+            </div>
+            <div class="atomic-mass">6.94</div>
+            <ul class="atomic-weight">
+              <li>3</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c2 r2 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/07/Beryllium.jpg')">
+          <div class="square">
+            <div class="atomic-number">4</div>
+            <div class="label">
+              <div class="symbol">Be</div>
+              <div class="name">Beryllium</div>
+            </div>
+            <div class="atomic-mass">9.0122</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c13 r2 clickable-cell" onclick="showPopup('https://www.clinicaladvisor.com/wp-content/uploads/sites/11/2018/12/0817altmedsboron_1268589-860x573.jpg')">
+          <div class="square">
+            <div class="atomic-number">5</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">B</div>
+              <div class="name">Boron</div>
+            </div>
+            <div class="atomic-mass">10.81</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c14 r2 clickable-cell" onclick="showPopup('https://static.dezeen.com/uploads/2021/06/Dezeen-guide-to-carbon_01-hero-852x479.jpg')">
+          <div class="square">
+            <div class="atomic-number">6</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">C</div>
+              <div class="name">Carbon</div>
+            </div>
+            <div class="atomic-mass">12.011</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c15 r2 clickable-cell" onclick="showPopup('https://www.nexair.com/wp-content/uploads/2022/08/What-are-the-4-major-uses-of-nitrogen_.jpg')">
+          <div class="square">
+            <div class="atomic-number">7</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">N</div>
+              <div class="name">Nitrogen</div>
+            </div>
+            <div class="atomic-mass">14.007</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>5</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c16 r2 clickable-cell" onclick="showPopup('https://science4fun.info/wp-content/uploads/2017/08/oxygen-atom.jpg')">
+          <div class="square">
+            <div class="atomic-number">8</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">O</div>
+              <div class="name">Oxygen</div>
+            </div>
+            <div class="atomic-mass">15.999</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>6</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c17 r2 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/4zYbLgfshv9n1n4nMueNC1Aw9eU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fluorinesimulant-56a12c323df78cf772681c61.jpg')">
+          <div class="square">
+            <div class="atomic-number">9</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">F</div>
+              <div class="name">Flourine</div>
+            </div>
+            <div class="atomic-mass">18.998</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>7</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c18 r2 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2019/01/Neon.jpg?fit=225%2C225&ssl=1')">
+          <div class="square">
+            <div class="atomic-number">10</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Ne</div>
+              <div class="name">Neon</div>
+            </div>
+            <div class="atomic-mass">20.18</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c1 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/2/27/Na_%28Sodium%29.jpg')">
+          <div class="square">
+            <div class="atomic-number">11</div>
+            <div class="label">
+              <div class="symbol">Na</div>
+              <div class="name">Sodium</div>
+            </div>
+            <div class="atomic-mass">22.99</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c2 r3 clickable-cell" onclick="showPopup('https://cdn.britannica.com/38/131138-050-62E0CD67/Magnesium-magnesium-crystals-processing-crust-Earth.jpg')">
+          <div class="square">
+            <div class="atomic-number">12</div>
+            <div class="label">
+              <div class="symbol">Mg</div>
+              <div class="name">Magnesium</div>
+            </div>
+            <div class="atomic-mass">24.305</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c13 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Aluminium-4.jpg/640px-Aluminium-4.jpg')">
+          <div class="square">
+            <div class="atomic-number">13</div>
+            <div class="label">
+              <div class="symbol">Al</div>
+              <div class="name">Aluminium</div>
+            </div>
+            <div class="atomic-mass">26.982</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c14 r3 clickable-cell" onclick="showPopup('https://www.mindat.org/imagecache/c5/34/07125740016845740488680.jpg')">
+          <div class="square">
+            <div class="atomic-number">14</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Si</div>
+              <div class="name">Silicon</div>
+            </div>
+            <div class="atomic-mass">28.085</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c15 r3 clickable-cell" onclick="showPopup('https://m.media-amazon.com/images/I/61B2TT8l6BL._AC_UF1000,1000_QL80_.jpg')">
+          <div class="square">
+            <div class="atomic-number">15</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">P</div>
+              <div class="name">Phosphorus</div>
+            </div>
+            <div class="atomic-mass">30.974</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>5</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c16 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg/640px-Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg')">
+          <div class="square">
+            <div class="atomic-number">16</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">S</div>
+              <div class="name">Sulfur</div>
+            </div>
+            <div class="atomic-mass">32.06</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>6</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c17 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Chlorine_dioxide_gas_and_solution.jpg/220px-Chlorine_dioxide_gas_and_solution.jpg')">
+          <div class="square">
+            <div class="atomic-number">17</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Cl</div>
+              <div class="name">Chlorine</div>
+            </div>
+            <div class="atomic-mass">35.45</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>7</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c18 r3 clickable-cell" onclick="showPopup('https://images-of-elements.com/argon.jpg')">
+          <div class="square">
+            <div class="atomic-number">18</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Ar</div>
+              <div class="name">Argon</div>
+            </div>
+            <div class="atomic-mass">39.948</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>8</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c1 r4 clickable-cell" onclick="showPopup('https://cdn.britannica.com/77/131177-050-79292189/fragments-Potassium-metal.jpg')">
+          <div class="square">
+            <div class="atomic-number">19</div>
+            <div class="label">
+              <div class="symbol">K</div>
+              <div class="name">Potassium</div>
+            </div>
+            <div class="atomic-mass">39.098</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>8</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c2 r4 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/09/Calcium-Metal.jpg')">
+          <div class="square">
+            <div class="atomic-number">20</div>
+            <div class="label">
+              <div class="symbol">Ca</div>
+              <div class="name">Calcium</div>
+            </div>
+            <div class="atomic-mass">40.078</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c3 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/e/e6/Scandium_sublimed_dendritic_and_1cm3_cube.jpg')">
+          <div class="square">
+            <div class="atomic-number">21</div>
+            <div class="label">
+              <div class="symbol">Sc</div>
+              <div class="name">Scandium</div>
+            </div>
+            <div class="atomic-mass">44.956</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c4 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/db/Titan-crystal_bar.JPG')">
+          <div class="square">
+            <div class="atomic-number">22</div>
+            <div class="label">
+              <div class="symbol">Ti</div>
+              <div class="name">Titanium</div>
+            </div>
+            <div class="atomic-mass">47.867</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>10</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c5 r4 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2018/11/Vanadium.jpg?fit=225%2C225&ssl=1')">
+          <div class="square">
+            <div class="atomic-number">23</div>
+            <div class="label">
+              <div class="symbol">V</div>
+              <div class="name">Vanadium</div>
+            </div>
+            <div class="atomic-mass">50.942</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>11</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c6 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/08/Chromium_crystals_and_1cm3_cube.jpg')">
+          <div class="square">
+            <div class="atomic-number">24</div>
+            <div class="label">
+              <div class="symbol">Cr</div>
+              <div class="name">Chromium</div>
+            </div>
+            <div class="atomic-mass">51.996</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>13</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c7 r4 clickable-cell" onclick="showPopup('https://cdn.britannica.com/75/126275-050-CEB51BC1/Manganese.jpg')">
+          <div class="square">
+            <div class="atomic-number">25</div>
+            <div class="label">
+              <div class="symbol">Mn</div>
+              <div class="name">Manganese</div>
+            </div>
+            <div class="atomic-mass">54.938</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>13</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c8 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Iron_electrolytic_and_1cm3_cube.jpg/640px-Iron_electrolytic_and_1cm3_cube.jpg')">
+          <div class="square">
+            <div class="atomic-number">26</div>
+            <div class="label">
+              <div class="symbol">Fe</div>
+              <div class="name">Iron</div>
+            </div>
+            <div class="atomic-mass">55.845</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>14</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c9 r4 clickable-cell" onclick="showPopup('https://www.nationaldefensemagazine.org/-/media/sites/magazine/2022/08/kobalt_electrolytic_and_1cm3_cube.jpg')">
+          <div class="square">
+            <div class="atomic-number">27</div>
+            <div class="label">
+              <div class="symbol">Co</div>
+              <div class="name">Cobalt</div>
+            </div>
+            <div class="atomic-mass">58.933</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>15</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c10 r4 clickable-cell" onclick="showPopup('https://images.prismic.io/xometry-marketing/525a8ef9-1bd1-47fa-a58a-7a607ac75456_nickel.jpg?auto=compress%2Cformat&rect=143%2C0%2C714%2C714&w=486&h=486&fit=max')">
+          <div class="square">
+            <div class="atomic-number">28</div>
+            <div class="label">
+              <div class="symbol">Ni</div>
+              <div class="name">Nickel</div>
+            </div>
+            <div class="atomic-mass">58.693</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>16</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c11 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NatCopper.jpg/1200px-NatCopper.jpg')">
+          <div class="square">
+            <div class="atomic-number">29</div>
+            <div class="label">
+              <div class="symbol">Cu</div>
+              <div class="name">Copper</div>
+            </div>
+            <div class="atomic-mass">63.546</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c12 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/f/f9/Zinc_fragment_sublimed_and_1cm3_cube.jpg')">
+          <div class="square">
+            <div class="atomic-number">30</div>
+            <div class="label">
+              <div class="symbol">Zn</div>
+              <div class="name">Zinc</div>
+            </div>
+            <div class="atomic-mass">65.38</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c13 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Gallium_crystals.jpg/800px-Gallium_crystals.jpg')">
+          <div class="square">
+            <div class="atomic-number">31</div>
+            <div class="label">
+              <div class="symbol">Ga</div>
+              <div class="name">Gallium</div>
+            </div>
+            <div class="atomic-mass">69.723</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c14 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/08/Polycrystalline-germanium.jpg')">
+          <div class="square">
+            <div class="atomic-number">32</div>
+            <div class="label">
+              <div class="symbol">Ge</div>
+              <div class="name">Germanium</div>
+            </div>
+            <div class="atomic-mass">72.63</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c15 r4 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/mQ4LX8-0x65-Zb-LYI_V0fcYsjw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-184957763-25bd535075fa4891bbd52a57a1e6cb0c.jpg')">
+          <div class="square">
+            <div class="atomic-number">33</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">As</div>
+              <div class="name">Arsenic</div>
+            </div>
+            <div class="atomic-mass">74.922</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>5</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c16 r4 clickable-cell" onclick="showPopup('https://www.caracteristicass.de/wp-content/uploads/2020/03/caracteristicas-del-selenio.jpg')">
+            <div class="square">
+            <div class="atomic-number">34</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Se</div>
+              <div class="name">Selenium</div>
+            </div>
+            <div class="atomic-mass">78.971</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>6</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c17 r4 clickable-cell" onclick="showPopup('https://cdn.mos.cms.futurecdn.net/S6SNpRNQFXaMCyyYttoQcc-1200-80.jpg')">
+            <div class="square">
+            <div class="atomic-number">35</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Br</div>
+              <div class="name">Bromine</div>
+            </div>
+            <div class="atomic-mass">79.904</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>7</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c18 r4 clickable-cell" onclick="showPopup('https://www.smart-elements.com/Angebote/Kr_neu800x600.jpg')">
+          <div class="square">
+            <div class="atomic-number">36</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Kr</div>
+              <div class="name">Krypton</div>
+            </div>
+            <div class="atomic-mass">83.798</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>8</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c1 r5 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2018/11/Rubidium.jpg?fit=252%2C200&ssl=1')">
+          <div class="square">
+            <div class="atomic-number">37</div>
+            <div class="label">
+              <div class="symbol">Rb</div>
+              <div class="name">Rubidium</div>
+            </div>
+            <div class="atomic-mass">85.468</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>8</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c2 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Strontium_destilled_crystals.jpg/220px-Strontium_destilled_crystals.jpg')">
+          <div class="square">
+            <div class="atomic-number">38</div>
+            <div class="label">
+              <div class="symbol">Sr</div>
+              <div class="name">Strontium</div>
+            </div>
+            <div class="atomic-mass">87.62</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c3 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/19/Yttrium_sublimed_dendritic_and_1cm3_cube.jpg')">
+          <div class="square">
+            <div class="atomic-number">39</div>
+            <div class="label">
+              <div class="symbol">Y</div>
+              <div class="name">Yttrium</div>
+            </div>
+            <div class="atomic-mass">88.906</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c4 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/92/Zirconium_crystal_bar_and_1cm3_cube.jpg')">
+          <div class="square">
+            <div class="atomic-number">40</div>
+            <div class="label">
+              <div class="symbol">Zr</div>
+              <div class="name">Zirconium</div>
+            </div>
+            <div class="atomic-mass">91.224</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>10</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c5 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/f/f2/Niobium_crystals_and_1cm3_cube.jpg')">
+          <div class="square">
+            <div class="atomic-number">41</div>
+            <div class="label">
+              <div class="symbol">Nb</div>
+              <div class="name">Niobium</div>
+            </div>
+            <div class="atomic-mass">92.906</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>12</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c6 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/3/32/Molybdenum_crystaline_fragment_and_1cm3_cube.jpg')">
+          <div class="square">
+            <div class="atomic-number">42</div>
+            <div class="label">
+              <div class="symbol">Mo</div>
+              <div class="name">Molybdenum</div>
+            </div>
+            <div class="atomic-mass">95.95</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>13</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c7 r5 clickable-cell" onclick="showPopup('https://www.industrialheating.com/ext/resources/2018-Experts-Speak/082218-DanH-1.jpg?t=1534944957&width=696')">
+          <div class="square">
+            <div class="atomic-number">43</div>
+            <div class="label">
+              <div class="symbol">Tc</div>
+              <div class="name">Technetium</div>
+            </div>
+            <div class="atomic-mass">(98)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>13</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c8 r5 clickable-cell" onclick="showPopup('https://www.chapelle.co.uk/Admin/Images/Editor/Blog/Chapelle/2013/Ruthenium%20in%20Jewellery/Ruthenium%20in%20Jewellery.jpg')">
+          <div class="square">
+            <div class="atomic-number">44</div>
+            <div class="label">
+              <div class="symbol">Ru</div>
+              <div class="name">Ruthenium</div>
+            </div>
+            <div class="atomic-mass">101.07</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>15</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c9 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/98/Rhodium_powder_pressed_melted.jpg')">
+          <div class="square">
+            <div class="atomic-number">45</div>
+            <div class="label">
+              <div class="symbol">Rh</div>
+              <div class="name">Rhodium</div>
+            </div>
+            <div class="atomic-mass">102.91</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>16</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c10 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d7/Palladium_%2846_Pd%29.jpg')">
+          <div class="square">
+            <div class="atomic-number">46</div>
+            <div class="label">
+              <div class="symbol">Pd</div>
+              <div class="name">Palladium</div>
+            </div>
+            <div class="atomic-mass">106.42</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c11 r5 clickable-cell" onclick="showPopup('https://geologyscience.com/wp-content/uploads/2019/06/Silver.png')">
+          <div class="square">
+            <div class="atomic-number">47</div>
+            <div class="label">
+              <div class="symbol">Ag</div>
+              <div class="name">Silver</div>
+            </div>
+            <div class="atomic-mass">107.87</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c12 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/b5/Cadmium-crystal_bar.jpg')">
+          <div class="square">
+            <div class="atomic-number">48</div>
+            <div class="label">
+              <div class="symbol">Cd</div>
+              <div class="name">Cadmium</div>
+            </div>
+            <div class="atomic-mass">112.41</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c13 r5 clickable-cell" onclick="showPopup('https://cdn.mos.cms.futurecdn.net/EmE4MmqR4GzYfF3MhzotFm-1200-80.jpg')">
+          <div class="square">
+            <div class="atomic-number">49</div>
+            <div class="label">
+              <div class="symbol">In</div>
+              <div class="name">Indium</div>
+            </div>
+            <div class="atomic-mass">114.82</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c14 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Cassiterite09.jpg/220px-Cassiterite09.jpg')">
+          <div class="square">
+            <div class="atomic-number">50</div>
+            <div class="label">
+              <div class="symbol">Sn</div>
+              <div class="name">Tin</div>
+            </div>
+            <div class="atomic-mass">204.38</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c15 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/5/5c/Antimony-4.jpg')">
+          <div class="square">
+            <div class="atomic-number">51</div>
+            <div class="label">
+              <div class="symbol">Sb</div>
+              <div class="name">Antimony</div>
+            </div>
+            <div class="atomic-mass">121.76</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>5</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c16 r5 clickable-cell" onclick="showPopup('https://d2cbg94ubxgsnp.cloudfront.net/Pictures/480xany/4/0/2/143402_shutterstock_790341754_485480.jpg')">
+          <div class="square">
+            <div class="atomic-number">52</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Te</div>
+              <div class="name">Tellurium</div>
+            </div>
+            <div class="atomic-mass">127.6</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>6</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c17 r5 clickable-cell" onclick="showPopup('https://cdn.britannica.com/68/132468-050-9DE736C3/Iodine.jpg')">
+          <div class="square">
+            <div class="atomic-number">53</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">I</div>
+              <div class="name">Iodine</div>
+            </div>
+            <div class="atomic-mass">126.9</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>7</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c18 r5 clickable-cell" onclick="showPopup('https://chemistrytalk.org/wp-content/uploads/2023/03/xenon-lamp.jpg')">
+          <div class="square">
+            <div class="atomic-number">54</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Xe</div>
+              <div class="name">Xenon</div>
+            </div>
+            <div class="atomic-mass">131.29</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>8</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c1 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/3/3d/Cesium.jpg')">
+          <div class="square">
+            <div class="atomic-number">55</div>
+            <div class="label">
+              <div class="symbol">Cs</div>
+              <div class="name">Caesium</div>
+            </div>
+            <div class="atomic-mass">132.91</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>8</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c2 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/16/Barium_unter_Argon_Schutzgas_Atmosph%C3%A4re.jpg')">
+          <div class="square">
+            <div class="atomic-number">56</div>
+            <div class="label">
+              <div class="symbol">Ba</div>
+              <div class="name">Barium</div>
+            </div>
+            <div class="atomic-mass">137.33</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c2 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/8/8c/Lanthanum-2.jpg')">
+          <div class="square">
+            <div class="atomic-number">57</div>
+            <div class="label">
+              <div class="symbol">La</div>
+              <div class="name">Lanthanum</div>
+            </div>
+            <div class="atomic-mass">138.91</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>18</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c3 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cerium2.jpg/640px-Cerium2.jpg')">
+          <div class="square">
+            <div class="atomic-number">58</div>
+            <div class="label">
+              <div class="symbol">Ce</div>
+              <div class="name">Cerium</div>
+            </div>
+            <div class="atomic-mass">140.12</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>19</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c4 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/c/c7/Praseodymium.jpg')">
+          <div class="square">
+            <div class="atomic-number">59</div>
+            <div class="label">
+              <div class="symbol">Pr</div>
+              <div class="name">Praseodymium</div>
+            </div>
+            <div class="atomic-mass">140.91</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>21</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c5 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/ba/Neodymium2.jpg')">
+          <div class="square">
+            <div class="atomic-number">60</div>
+            <div class="label">
+              <div class="symbol">Nd</div>
+              <div class="name">Neodymium</div>
+            </div>
+            <div class="atomic-mass">144.24</div>
+            <ul class="atomic-weight"> 
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>22</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c6 r9 clickable-cell" onclick="showPopup('https://static.wikia.nocookie.net/neventale/images/5/5b/Promethium.jpg/revision/latest?cb=20130507210743');">
+          <div class="square">
+            <div class="atomic-number">61</div>
+            <div class="label">
+              <div class="symbol">Pm</div>
+              <div class="name">Promethium</div>
+            </div>
+            <div class="atomic-mass">144.24</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>23</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c7 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/8/88/Samarium-2.jpg');">
+          <div class="square">
+            <div class="atomic-number">62</div>
+            <div class="label">
+              <div class="symbol">Sm</div>
+              <div class="name">Samarium</div>
+            </div>
+            <div class="atomic-mass">150.36</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>24</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c8 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Europium.jpg/640px-Europium.jpg');">
+          <div class="square">
+            <div class="atomic-number">63</div>
+            <div class="label">
+              <div class="symbol">Eu</div>
+              <div class="name">Europium</div>
+            </div>
+            <div class="atomic-mass">151.96</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>25</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c9 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d1/Gadolinium-4.jpg');">
+          <div class="square">
+            <div class="atomic-number">64</div>
+            <div class="label">
+              <div class="symbol">Gd</div>
+              <div class="name">Gadolinium</div>
+            </div>
+            <div class="atomic-mass">157.25</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>25</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c10 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/9a/Terbium-2.jpg');">
+          <div class="square">
+            <div class="atomic-number">65</div>
+            <div class="label">
+              <div class="symbol">Tb</div>
+              <div class="name">Terbium</div>
+            </div>
+            <div class="atomic-mass">158.93</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>27</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c11 r9 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/2uVS3jDL5aFJvcokmXEKBvUlvc8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Dy-Metal-2-56a613dd5f9b58b7d0dfcc4a.jpg');">
+          <div class="square">
+            <div class="atomic-number">66</div>
+            <div class="label">
+              <div class="symbol">Dy</div>
+              <div class="name">Dysprosium</div>
+            </div>
+            <div class="atomic-mass">162.5</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>28</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c12 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/0a/Holmium2.jpg');">
+          <div class="square">
+            <div class="atomic-number">67</div>
+            <div class="label">
+              <div class="symbol">Ho</div>
+              <div class="name">Holmium</div>
+            </div>
+            <div class="atomic-mass">164.93</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>29</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c13 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/12/Erbium-crop.jpg');">
+          <div class="square">
+            <div class="atomic-number">68</div>
+            <div class="label">
+              <div class="symbol">Er</div>
+              <div class="name">Erbium</div>
+            </div>
+            <div class="atomic-mass">167.26</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>30</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c14 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/1e/Thulium_sublimed_dendritic_and_1cm3_cube.jpg');">
+          <div class="square">
+            <div class="atomic-number">69</div>
+            <div class="label">
+              <div class="symbol">Tm</div>
+              <div class="name">Thulium</div>
+            </div>
+            <div class="atomic-mass">168.93</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>31</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c15 r9 clickable-cell" onclick="showPopup('https://www.mindat.org/imagecache/89/b1/08315760014961428758196.jpg');">
+          <div class="square">
+            <div class="atomic-number">70</div>
+            <div class="label">
+              <div class="symbol">Yb</div>
+              <div class="name">Ytterbium</div>
+            </div>
+            <div class="atomic-mass">173.05</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c16 r9 clickable-cell" onclick="showPopup('https://sciencenotes.org/wp-content/uploads/2017/09/lutetium.jpg');">
+          <div class="square">
+            <div class="atomic-number">71</div>
+            <div class="label">
+              <div class="symbol">Lu</div>
+              <div class="name">Lutetium</div>
+            </div>
+            <div class="atomic-mass">174.97</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c4 r6 clickable-cell" onclick="showPopup('https://cdn.mos.cms.futurecdn.net/476mwLnFvNQhpUyNpNu2zn.jpg');">
+          <div class="square">
+            <div class="atomic-number">72</div>
+            <div class="label">
+              <div class="symbol">Hf</div>
+              <div class="name">Hafnium</div>
+            </div>
+            <div class="atomic-mass">178.49</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>10</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c5 r6 clickable-cell" onclick="showPopup('https://d2ttikhf7xbzbs.cloudfront.net/minerals/tantalum.jpg');">
+          <div class="square">
+            <div class="atomic-number">73</div>
+            <div class="label">
+              <div class="symbol">Ta</div>
+              <div class="name">Tantalum</div>
+            </div>
+            <div class="atomic-mass">180.95</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>11</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c6 r6 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/i-EOfIaPD2pYYCNb82t6dqGD788=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Wolfram_evaporated_crystals_and_1cm3_cube-59a0d54a22fa3a00103a2700.jpg');">
+          <div class="square">
+            <div class="atomic-number">74</div>
+            <div class="label">
+              <div class="symbol">W</div>
+              <div class="name">Tungsten</div>
+            </div>
+            <div class="atomic-mass">183.84</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>12</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c7 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Rhenium_single_crystal_bar_and_1cm3_cube.jpg/1200px-Rhenium_single_crystal_bar_and_1cm3_cube.jpg');">
+          <div class="square">
+            <div class="atomic-number">75</div>
+            <div class="label">
+              <div class="symbol">Re</div>
+              <div class="name">Rhenium</div>
+            </div>
+            <div class="atomic-mass">186.21</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>13</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c8 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Osmium_cluster.jpg/220px-Osmium_cluster.jpg');">
+          <div class="square">
+            <div class="atomic-number">76</div>
+            <div class="label">
+              <div class="symbol">Os</div>
+              <div class="name">Osmium</div>
+            </div>
+            <div class="atomic-mass">190.23</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>14</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c9 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/a/a8/Iridium-2.jpg');">
+          <div class="square">
+            <div class="atomic-number">77</div>
+            <div class="label">
+              <div class="symbol">Ir</div>
+              <div class="name">Iridium</div>
+            </div>
+            <div class="atomic-mass">192.22</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>15</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c10 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg');">
+          <div class="square">
+            <div class="atomic-number">78</div>
+            <div class="label">
+              <div class="symbol">Pt</div>
+              <div class="name">Platinum</div>
+            </div>
+            <div class="atomic-mass">195.08</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>17</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c11 r6 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/QjFYmqeC_tsWT2bsXHP0WC8gwrA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/closeup-of-big-gold-nugget-511603038-5ad92a97fa6bcc00362b919b.jpg');">
+          <div class="square">
+            <div class="atomic-number">79</div>
+            <div class="label">
+              <div class="symbol">Au</div>
+              <div class="name">Gold</div>
+            </div>
+            <div class="atomic-mass">196.97</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c12 r6 clickable-cell" onclick="showPopup('https://cdn.britannica.com/91/150291-050-675525C7/mercury-beads-glass-container.jpg');">
+          <div class="square">
+            <div class="atomic-number">80</div>
+            <div class="label">
+              <div class="symbol">Hg</div>
+              <div class="name">Mercury</div>
+            </div>
+            <div class="atomic-mass">200.59</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c13 r6 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/05/Thallium.jpeg');">
+          <div class="square">
+            <div class="atomic-number">81</div>
+            <div class="label">
+              <div class="symbol">Tl</div>
+              <div class="name">Thallium</div>
+            </div>
+            <div class="atomic-mass">204.38</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c14 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lead_electrolytic_and_1cm3_cube.jpg/1200px-Lead_electrolytic_and_1cm3_cube.jpg');">
+          <div class="square">
+            <div class="atomic-number">82</div>
+            <div class="label">
+              <div class="symbol">Pb</div>
+              <div class="name">Lead</div>
+            </div>
+            <div class="atomic-mass">207.2</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c15 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bismuth_crystals_and_1cm3_cube.jpg/1200px-Bismuth_crystals_and_1cm3_cube.jpg');">
+          <div class="square">
+            <div class="atomic-number">83</div>
+            <div class="label">
+              <div class="symbol">Bi</div>
+              <div class="name">Bismuth</div>
+            </div>
+            <div class="atomic-mass">208.98</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>5</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c16 r6 clickable-cell" onclick="showPopup('https://theodoregray.com/periodictable/Samples/084.5/s13s.JPG');">
+          <div class="square">
+            <div class="atomic-number">84</div>
+            <div class="label">
+              <div class="symbol">Po</div>
+              <div class="name">Polonium</div>
+            </div>
+            <div class="atomic-mass">(209)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>6</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c17 r6 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/03/Astatine.jpg');">
+          <div class="square">
+            <div class="atomic-number">85</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">At</div>
+              <div class="name">Astatine</div>
+            </div>
+            <div class="atomic-mass">(210)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>7</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c18 r6 clickable-cell" onclick="showPopup('https://www.purewaterproducts.com/img/radon_306.jpg');">
+          <div class="square">
+            <div class="atomic-number">86</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Rn</div>
+              <div class="name">Radon</div>
+            </div>
+            <div class="atomic-mass">(222)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>8</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c1 r7 clickable-cell" onclick="showPopup('https://www.arhse.com/wp-content/uploads/2023/01/francium.png');">
+          <div class="square">
+            <div class="atomic-number">87</div>
+            <div class="label">
+              <div class="symbol">Fr</div>
+              <div class="name">Francium</div>
+            </div>
+            <div class="atomic-mass">(223)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>8</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element selements c2 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/bb/Radium226.jpg');">
+          <div class="square">
+            <div class="atomic-number">88</div>
+            <div class="label">
+              <div class="symbol">Ra</div>
+              <div class="name">Radium</div>
+            </div>
+            <div class="atomic-mass">(226)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c2 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Uraninite-39029.jpg/150px-Uraninite-39029.jpg');">
+          <div class="square">
+            <div class="atomic-number">89</div>
+            <div class="label">
+              <div class="symbol">Ac</div>
+              <div class="name">Actinium</div>
+            </div>
+            <div class="atomic-mass">(227)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c3 r10 clickable-cell" onclick="showPopup('https://www.cancer.gov/sites/g/files/xnrzdm211/files/styles/cgov_article/public/cgov_image/media_image/800/800/files/thorium.jpg?h=4965b7f7&itok=2-Nn8PVg');">
+          <div class="square">
+            <div class="atomic-number">90</div>
+            <div class="label">
+              <div class="symbol">Th</div>
+              <div class="name">Thorium</div>
+            </div>
+            <div class="atomic-mass">232.04</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>18</li>
+              <li>10</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c4 r10 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/04/Protactinium.jpg');">
+          <div class="square">
+            <div class="atomic-number">91</div>
+            <div class="label">
+              <div class="symbol">Pa</div>
+              <div class="name">Protactinium</div>
+            </div>
+            <div class="atomic-mass">231.04</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>20</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c5 r10 clickable-cell" onclick="showPopup('https://images-of-elements.com/s/uranium.jpg');">
+          <div class="square">
+            <div class="atomic-number">92</div>
+            <div class="label">
+              <div class="symbol">U</div>
+              <div class="name">Uranium</div>
+            </div>
+            <div class="atomic-mass">238.03</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>21</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c6 r10 clickable-cell" onclick="showPopup('https://periodictable.com/Samples/Aeschynite/s6s.JPG');">
+          <div class="square">
+            <div class="atomic-number">93</div>
+            <div class="label">
+              <div class="symbol">Np</div>
+              <div class="name">Neptunium</div>
+            </div>
+            <div class="atomic-mass">(237)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>22</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c7 r10 clickable-cell" onclick="showPopup('https://i.pinimg.com/736x/80/09/d9/8009d933021a8a8b6f93028e38d55475.jpg');">
+          <div class="square">
+            <div class="atomic-number">94</div>
+            <div class="label">
+              <div class="symbol">Pu</div>
+              <div class="name">Plutonium</div>
+            </div>
+            <div class="atomic-mass">(244)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>24</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c8 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/e/ee/Americium_microscope.jpg');">
+          <div class="square">
+            <div class="atomic-number">95</div>
+            <div class="label">
+              <div class="symbol">Am</div>
+              <div class="name">Americium</div>
+            </div>
+            <div class="atomic-mass">(243)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>25</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c9 r10 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2019/01/Curium.jpg?fit=225%2C225&ssl=1');">
+          <div class="square">
+            <div class="atomic-number">96</div>
+            <div class="label">
+              <div class="symbol">Cm</div>
+              <div class="name">Curium</div>
+            </div>
+            <div class="atomic-mass">(247)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>25</li>
+              <li>9</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c10 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Berkelium_metal.jpg/220px-Berkelium_metal.jpg');">
+          <div class="square">
+            <div class="atomic-number">97</div>
+            <div class="label">
+              <div class="symbol">Bk</div>
+              <div class="name">Berkelium</div>
+            </div>
+            <div class="atomic-mass">(247)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>27</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c11 r10 clickable-cell" onclick="showPopup('https://www.ccdc.cam.ac.uk/media/elements/Californium.jpg');">
+          <div class="square">
+            <div class="atomic-number">98</div>
+            <div class="label">
+              <div class="symbol">Cf</div>
+              <div class="name">Californium</div>
+            </div>
+            <div class="atomic-mass">(251)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>28</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c12 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/5/55/Einsteinium.jpg');">
+          <div class="square">
+            <div class="atomic-number">99</div>
+            <div class="label">
+              <div class="symbol">Es</div>
+              <div class="name">Einsteinium</div>
+            </div>
+            <div class="atomic-mass">(252)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>29</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c13 r10 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcipT4LD7yyVQ6fN44Y9qgFdXhgtHUg7wOYv76OqVAeRjXwCW-lq7QjufIcE2P9FxMCvE&usqp=CAU');">
+          <div class="square">
+            <div class="atomic-number">100</div>
+            <div class="label">
+              <div class="symbol">Fm</div>
+              <div class="name">Fermium</div>
+            </div>
+            <div class="atomic-mass">(257)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>30</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c14 r10 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcipT4LD7yyVQ6fN44Y9qgFdXhgtHUg7wOYv76OqVAeRjXwCW-lq7QjufIcE2P9FxMCvE&usqp=CAU');">
+          <div class="square">
+            <div class="atomic-number">101</div>
+            <div class="label">
+              <div class="symbol">Md</div>
+              <div class="name">Mendelevium</div>
+            </div>
+            <div class="atomic-mass">(258)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>31</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c15 r10 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLCBRqqKaFpLI1070ePw7ZYVgbrss_VpZVm5rvMGkkK5kSS_P4tGK2oNcz72jc2UAylNU&usqp=CAU');">
+          <div class="square">
+            <div class="atomic-number">102</div>
+            <div class="label">
+              <div class="symbol">No</div>
+              <div class="name">Nobelium</div>
+            </div>
+            <div class="atomic-mass">(259)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>8</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element felements c16 r10 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/03/Lawrencium.jpg');">
+          <div class="square">
+            <div class="atomic-number">103</div>
+            <div class="label">
+              <div class="symbol">Lr</div>
+              <div class="name">Lawrencium</div>
+            </div>
+            <div class="atomic-mass">(266)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>8</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c4 r7 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3dR_pgmRQQbNuwktaanCJli2bBJ1V9KGwVUjnr40kbTpGSIIA1hEuOaIQkKdREsD2nQ&usqp=CAU');">
+          <div class="square">
+            <div class="atomic-number">104</div>
+            <div class="label">
+              <div class="symbol">Rf</div>
+              <div class="name">Rutherfordium</div>
+            </div>
+            <div class="atomic-mass">(267)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>10</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c5 r7 clickable-cell" onclick="showPopup('https://whatmaster.com/wp-content/uploads/2020/10/Einsteinium-L-min-6.jpg');">
+          <div class="square">
+            <div class="atomic-number">105</div>
+            <div class="label">
+              <div class="symbol">Db</div>
+              <div class="name">Dubnium</div>
+            </div>
+            <div class="atomic-mass">(268)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>11</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c6 r7 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/01/Seaborgium.jpg');">
+          <div class="square">
+            <div class="atomic-number">106</div>
+            <div class="label">
+              <div class="symbol">Sg</div>
+              <div class="name">Seaborgium</div>
+            </div>
+            <div class="atomic-mass">(269)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>12</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c7 r7 clickable-cell" onclick="showPopup('https://periodiske-system.dk/img/images/lowRes/107.jpg');">
+          <div class="square">
+            <div class="atomic-number">107</div>
+            <div class="label">
+              <div class="symbol">Bh</div>
+              <div class="name">Bohrium</div>
+            </div>
+            <div class="atomic-mass">(270)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>13</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c8 r7 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/03/Hassium.jpg');">
+          <div class="square">
+            <div class="atomic-number">108</div>
+            <div class="label">
+              <div class="symbol">Hs</div>
+              <div class="name">Hassium</div>
+            </div>
+            <div class="atomic-mass">(277)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>14</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c9 r7 clickable-cell" onclick="showPopup('https://4.bp.blogspot.com/-A50yMId9oDA/VhNCtU6sNhI/AAAAAAAAamA/rH9Aos9NCZw/s1600/not%2BMeitnerium.jpg');">
+          <div class="square">
+            <div class="atomic-number">109</div>
+            <div class="label">
+              <div class="symbol">Mt</div>
+              <div class="name">Meitnerium</div>
+            </div>
+            <div class="atomic-mass">(278)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>15</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c10 r7 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpuqLdC8RKgbWY3X37nY_k4_dCBFDpr0IZQjUvGoPWxEY9hpwkKZsz5GmlYR53j47mudQ&usqp=CAU');">
+          <div class="square">
+            <div class="atomic-number">110</div>
+            <div class="label">
+              <div class="symbol">Ds</div>
+              <div class="name">Darmstadtium</div>
+            </div>
+            <div class="atomic-mass">(281)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>17</li>
+              <li>1</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c11 r7 clickable-cell" onclick="showPopup('https://preview.redd.it/oogroqg9g9d61.jpg?auto=webp&s=6f8054b7b4ab552a93d694694c94557056e6a70e');">
+          <div class="square">
+            <div class="atomic-number">111</div>
+            <div class="label">
+              <div class="symbol">Rg</div>
+              <div class="name">Roentgenium</div>
+            </div>
+            <div class="atomic-mass">(282)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>17</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element delements c12 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Sphalerite4.jpg/170px-Sphalerite4.jpg');">
+          <div class="square">
+            <div class="atomic-number">112</div>
+            <div class="label">
+              <div class="symbol">Cn</div>
+              <div class="name">Copernicium</div>
+            </div>
+            <div class="atomic-mass">(282)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>18</li>
+              <li>2</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c13 r7 clickable-cell" onclick="showPopup('https://study.com/cimages/multimages/16/360px-nihonium_shells.svg8971291457619994040.png');">
+          <div class="square">
+            <div class="atomic-number">113</div>
+            <div class="label">
+              <div class="symbol">Nh</div>
+              <div class="name">Nihonium</div>
+            </div>
+            <div class="atomic-mass">(286)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>18</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c14 r7 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX0PPS3o51fx61uicMUWRH88mI1t8xElh-22bL8FZWZXMgIVdU00xq8BwG2Ol1VG5YQLA&usqp=CAU');">
+          <div class="square">
+            <div class="atomic-number">114</div>
+            <div class="label">
+              <div class="symbol">Fl</div>
+              <div class="name">Flerovium</div>
+            </div>
+            <div class="atomic-mass">(289)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>18</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c15 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d2/Electron_shell_115_Moscovium.svg');">
+          <div class="square">
+            <div class="atomic-number">115</div>
+            <div class="label">
+              <div class="symbol">Mc</div>
+              <div class="name">Moscovium</div>
+            </div>
+            <div class="atomic-mass">(290)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>18</li>
+              <li>5</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c16 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Electron_shell_116_Livermorium.svg/1200px-Electron_shell_116_Livermorium.svg.png');">
+          <div class="square">
+            <div class="atomic-number">116</div>
+            <div class="label">
+              <div class="symbol">Lv</div>
+              <div class="name">Livermorium</div>
+            </div>
+            <div class="atomic-mass">(293)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>18</li>
+              <li>6</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c17 r7 clickable-cell" onclick="showPopup('https://study.com/cimages/multimages/16/tennessine_shells.svg1623366227564501870.png');">
+          <div class="square">
+            <div class="atomic-number">117</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Ts</div>
+              <div class="name">Tennessine</div>
+            </div>
+            <div class="atomic-mass">(294)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>18</li>
+              <li>7</li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="element pelements c18 r7 clickable-cell" onclick="showPopup('https://www.ccdc.cam.ac.uk/media/elements/Oganesson/Oganesson.png');">
+          <div class="square">
+            <div class="atomic-number">118</div>
+            <div class="label">
+              <div class="symbol" style="color: rgb(255, 0, 0);">Og</div>
+              <div class="name">Oganesson</div>
+            </div>
+            <div class="atomic-mass">(294)</div>
+            <ul class="atomic-weight">
+              <li>2</li>
+              <li>8</li>
+              <li>18</li>
+              <li>32</li>
+              <li>32</li>
+              <li>18</li>
+              <li>8</li>
+            </ul>
+          </div>
+        </a>
+        <div class="element delements c3 r6">
+          <div class="square">
+            <div class="label">
+              <div class="name">*</div>
+              <div class="name">57-71</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="element selements c18 r1">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">2</div>
-          <div class="label">
-            <div class="symbol">He</div>
-            <div class="name">Helium</div>
+        <div class="element delements c3 r7">
+          <div class="square">
+            <div class="label">
+              <div class="name">**</div>
+              <div class="name">89-103</div>
+            </div>
           </div>
-          <div class="atomic-mass">4.0026</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-          </ul>
         </div>
-      </div>
-      <div class="element selements c1 r2">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="model">
-          </div>
-          <div class="atomic-number">3</div>
-          <div class="label">
-            <div class="symbol">Li</div>
-            <div class="name">Lithium</div>
-          </div>
-          <div class="atomic-mass">6.94</div>
-          <ul class="atomic-weight">
-            <li>3</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c2 r2">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">4</div>
-          <div class="label">
-            <div class="symbol">Be</div>
-            <div class="name">Beryllium</div>
-          </div>
-          <div class="atomic-mass">9.0122</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c13 r2">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">5</div>
-          <div class="label">
-            <div class="symbol">B</div>
-            <div class="name">Boron</div>
-          </div>
-          <div class="atomic-mass">10.81</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>3</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c14 r2">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">6</div>
-          <div class="label">
-            <div class="symbol">C</div>
-            <div class="name">Carbon</div>
-          </div>
-          <div class="atomic-mass">12.011</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>4</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c15 r2">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">7</div>
-          <div class="label">
-            <div class="symbol">N</div>
-            <div class="name">Nitrogen</div>
-          </div>
-          <div class="atomic-mass">14.007</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>5</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c16 r2">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">8</div>
-          <div class="label">
-            <div class="symbol">O</div>
-            <div class="name">Oxygen</div>
-          </div>
-          <div class="atomic-mass">15.999</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>6</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c17 r2">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">9</div>
-          <div class="label">
-            <div class="symbol">F</div>
-            <div class="name">Flourine</div>
-          </div>
-          <div class="atomic-mass">18.998</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>7</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c18 r2">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">10</div>
-          <div class="label">
-            <div class="symbol">Ne</div>
-            <div class="name">Neon</div>
-          </div>
-          <div class="atomic-mass">20.18</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c1 r3">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">11</div>
-          <div class="label">
-            <div class="symbol">Na</div>
-            <div class="name">Sodium</div>
-          </div>
-          <div class="atomic-mass">22.99</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c2 r3">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">12</div>
-          <div class="label">
-            <div class="symbol">Mg</div>
-            <div class="name">Magnesium</div>
-          </div>
-          <div class="atomic-mass">24.305</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c13 r3">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">13</div>
-          <div class="label">
-            <div class="symbol">Al</div>
-            <div class="name">Aluminium</div>
-          </div>
-          <div class="atomic-mass">26.982</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>3</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c14 r3">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">14</div>
-          <div class="label">
-            <div class="symbol">Si</div>
-            <div class="name">Silicon</div>
-          </div>
-          <div class="atomic-mass">28.085</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>4</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c15 r3">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">15</div>
-          <div class="label">
-            <div class="symbol">P</div>
-            <div class="name">Phosphorus</div>
-          </div>
-          <div class="atomic-mass">30.974</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>5</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c16 r3">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">16</div>
-          <div class="label">
-            <div class="symbol">S</div>
-            <div class="name">Sulfur</div>
-          </div>
-          <div class="atomic-mass">32.06</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>6</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c17 r3">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">17</div>
-          <div class="label">
-            <div class="symbol">Cl</div>
-            <div class="name">Chlorine</div>
-          </div>
-          <div class="atomic-mass">35.45</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>7</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c18 r3">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">18</div>
-          <div class="label">
-            <div class="symbol">Ar</div>
-            <div class="name">Argon</div>
-          </div>
-          <div class="atomic-mass">39.948</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>8</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c1 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">19</div>
-          <div class="label">
-            <div class="symbol">K</div>
-            <div class="name">Potassium</div>
-          </div>
-          <div class="atomic-mass">39.098</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>8</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c2 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">20</div>
-          <div class="label">
-            <div class="symbol">Ca</div>
-            <div class="name">Calcium</div>
-          </div>
-          <div class="atomic-mass">40.078</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c3 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">21</div>
-          <div class="label">
-            <div class="symbol">Sc</div>
-            <div class="name">Scandium</div>
-          </div>
-          <div class="atomic-mass">44.956</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c4 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">22</div>
-          <div class="label">
-            <div class="symbol">Ti</div>
-            <div class="name">Titanium</div>
-          </div>
-          <div class="atomic-mass">47.867</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>10</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c5 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">23</div>
-          <div class="label">
-            <div class="symbol">V</div>
-            <div class="name">Vanadium</div>
-          </div>
-          <div class="atomic-mass">50.942</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>11</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c6 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">24</div>
-          <div class="label">
-            <div class="symbol">Cr</div>
-            <div class="name">Chromium</div>
-          </div>
-          <div class="atomic-mass">51.996</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>13</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c7 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">25</div>
-          <div class="label">
-            <div class="symbol">Mn</div>
-            <div class="name">Manganese</div>
-          </div>
-          <div class="atomic-mass">54.938</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>13</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c8 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">26</div>
-          <div class="label">
-            <div class="symbol">Fe</div>
-            <div class="name">Iron</div>
-          </div>
-          <div class="atomic-mass">55.845</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>14</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c9 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">27</div>
-          <div class="label">
-            <div class="symbol">Co</div>
-            <div class="name">Cobalt</div>
-          </div>
-          <div class="atomic-mass">58.933</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>15</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c10 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">28</div>
-          <div class="label">
-            <div class="symbol">Ni</div>
-            <div class="name">Nickel</div>
-          </div>
-          <div class="atomic-mass">58.693</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>16</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c11 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">29</div>
-          <div class="label">
-            <div class="symbol">Cu</div>
-            <div class="name">Copper</div>
-          </div>
-          <div class="atomic-mass">63.546</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c12 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">30</div>
-          <div class="label">
-            <div class="symbol">Zn</div>
-            <div class="name">Zinc</div>
-          </div>
-          <div class="atomic-mass">65.38</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c13 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">31</div>
-          <div class="label">
-            <div class="symbol">Ga</div>
-            <div class="name">Gallium</div>
-          </div>
-          <div class="atomic-mass">69.723</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>3</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c14 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">32</div>
-          <div class="label">
-            <div class="symbol">Ge</div>
-            <div class="name">Germanium</div>
-          </div>
-          <div class="atomic-mass">72.63</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>4</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c15 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">33</div>
-          <div class="label">
-            <div class="symbol">As</div>
-            <div class="name">Arsenic</div>
-          </div>
-          <div class="atomic-mass">74.922</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>5</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c16 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">34</div>
-          <div class="label">
-            <div class="symbol">Se</div>
-            <div class="name">Selenium</div>
-          </div>
-          <div class="atomic-mass">78.971</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>6</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c17 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">35</div>
-          <div class="label">
-            <div class="symbol">Br</div>
-            <div class="name">Bromine</div>
-          </div>
-          <div class="atomic-mass">79.904</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>7</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c18 r4">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">36</div>
-          <div class="label">
-            <div class="symbol">Kr</div>
-            <div class="name">Krypton</div>
-          </div>
-          <div class="atomic-mass">83.798</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>8</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c1 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">37</div>
-          <div class="label">
-            <div class="symbol">Rb</div>
-            <div class="name">Rubidium</div>
-          </div>
-          <div class="atomic-mass">85.468</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>8</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c2 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">38</div>
-          <div class="label">
-            <div class="symbol">Sr</div>
-            <div class="name">Strontium</div>
-          </div>
-          <div class="atomic-mass">87.62</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c3 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">39</div>
-          <div class="label">
-            <div class="symbol">Y</div>
-            <div class="name">Yttrium</div>
-          </div>
-          <div class="atomic-mass">88.906</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c4 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">40</div>
-          <div class="label">
-            <div class="symbol">Zr</div>
-            <div class="name">Zirconium</div>
-          </div>
-          <div class="atomic-mass">91.224</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>10</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c5 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">41</div>
-          <div class="label">
-            <div class="symbol">Nb</div>
-            <div class="name">Niobium</div>
-          </div>
-          <div class="atomic-mass">92.906</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>12</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c6 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">42</div>
-          <div class="label">
-            <div class="symbol">Mo</div>
-            <div class="name">Molybdenum</div>
-          </div>
-          <div class="atomic-mass">95.95</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>13</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c7 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">43</div>
-          <div class="label">
-            <div class="symbol">Tc</div>
-            <div class="name">Technetium</div>
-          </div>
-          <div class="atomic-mass">(98)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>13</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c8 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">44</div>
-          <div class="label">
-            <div class="symbol">Ru</div>
-            <div class="name">Ruthenium</div>
-          </div>
-          <div class="atomic-mass">101.07</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>15</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c9 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">45</div>
-          <div class="label">
-            <div class="symbol">Rh</div>
-            <div class="name">Rhodium</div>
-          </div>
-          <div class="atomic-mass">102.91</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>16</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c10 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">46</div>
-          <div class="label">
-            <div class="symbol">Pd</div>
-            <div class="name">Palladium</div>
-          </div>
-          <div class="atomic-mass">106.42</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c11 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">47</div>
-          <div class="label">
-            <div class="symbol">Ag</div>
-            <div class="name">Silver</div>
-          </div>
-          <div class="atomic-mass">107.87</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c12 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">48</div>
-          <div class="label">
-            <div class="symbol">Cd</div>
-            <div class="name">Cadmium</div>
-          </div>
-          <div class="atomic-mass">112.41</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c13 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">49</div>
-          <div class="label">
-            <div class="symbol">In</div>
-            <div class="name">Indium</div>
-          </div>
-          <div class="atomic-mass">114.82</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>3</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c14 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">50</div>
-          <div class="label">
-            <div class="symbol">Sn</div>
-            <div class="name">Tin</div>
-          </div>
-          <div class="atomic-mass">204.38</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>4</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c15 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">51</div>
-          <div class="label">
-            <div class="symbol">Sb</div>
-            <div class="name">Antimony</div>
-          </div>
-          <div class="atomic-mass">121.76</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>5</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c16 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">52</div>
-          <div class="label">
-            <div class="symbol">Te</div>
-            <div class="name">Tellurium</div>
-          </div>
-          <div class="atomic-mass">127.6</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>6</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c17 r5">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">53</div>
-          <div class="label">
-            <div class="symbol">I</div>
-            <div class="name">Iodine</div>
-          </div>
-          <div class="atomic-mass">126.9</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>7</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c18 r5">
-        <div class="overlay"></div>
-        <div class="square">
 
-          <div class="atomic-number">54</div>
-          <div class="label">
-            <div class="symbol">Xe</div>
-            <div class="name">Xenon</div>
-          </div>
-          <div class="atomic-mass">131.29</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>8</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c1 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">55</div>
-          <div class="label">
-            <div class="symbol">Cs</div>
-            <div class="name">Caesium</div>
-          </div>
-          <div class="atomic-mass">132.91</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>8</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c2 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">56</div>
-          <div class="label">
-            <div class="symbol">Ba</div>
-            <div class="name">Barium</div>
-          </div>
-          <div class="atomic-mass">137.33</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c2 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">57</div>
-          <div class="label">
-            <div class="symbol">La</div>
-            <div class="name">Lanthanum</div>
-          </div>
-          <div class="atomic-mass">138.91</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>18</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c3 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">58</div>
-          <div class="label">
-            <div class="symbol">Ce</div>
-            <div class="name">Cerium</div>
-          </div>
-          <div class="atomic-mass">140.12</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>19</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c4 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">59</div>
-          <div class="label">
-            <div class="symbol">Pr</div>
-            <div class="name">Praseodymium</div>
-          </div>
-          <div class="atomic-mass">140.91</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>21</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c5 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">60</div>
-          <div class="label">
-            <div class="symbol">Nd</div>
-            <div class="name">Neodymium</div>
-          </div>
-          <div class="atomic-mass">144.24</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>22</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c6 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">61</div>
-          <div class="label">
-            <div class="symbol">Pm</div>
-            <div class="name">Promethium</div>
-          </div>
-          <div class="atomic-mass">144.24</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>23</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c7 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">62</div>
-          <div class="label">
-            <div class="symbol">Sm</div>
-            <div class="name">Samarium</div>
-          </div>
-          <div class="atomic-mass">150.36</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>24</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c8 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">63</div>
-          <div class="label">
-            <div class="symbol">Eu</div>
-            <div class="name">Europium</div>
-          </div>
-          <div class="atomic-mass">151.96</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>25</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c9 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">64</div>
-          <div class="label">
-            <div class="symbol">Gd</div>
-            <div class="name">Gadolinium</div>
-          </div>
-          <div class="atomic-mass">157.25</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>25</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c10 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">65</div>
-          <div class="label">
-            <div class="symbol">Tb</div>
-            <div class="name">Terbium</div>
-          </div>
-          <div class="atomic-mass">158.93</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>27</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c11 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">66</div>
-          <div class="label">
-            <div class="symbol">Dy</div>
-            <div class="name">Dysprosium</div>
-          </div>
-          <div class="atomic-mass">162.5</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>28</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c12 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">67</div>
-          <div class="label">
-            <div class="symbol">Ho</div>
-            <div class="name">Holmium</div>
-          </div>
-          <div class="atomic-mass">164.93</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>29</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c13 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">68</div>
-          <div class="label">
-            <div class="symbol">Er</div>
-            <div class="name">Erbium</div>
-          </div>
-          <div class="atomic-mass">167.26</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>30</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c14 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">69</div>
-          <div class="label">
-            <div class="symbol">Tm</div>
-            <div class="name">Thulium</div>
-          </div>
-          <div class="atomic-mass">168.93</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>31</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c15 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">70</div>
-          <div class="label">
-            <div class="symbol">Yb</div>
-            <div class="name">Ytterbium</div>
-          </div>
-          <div class="atomic-mass">173.05</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c16 r9">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">71</div>
-          <div class="label">
-            <div class="symbol">Lu</div>
-            <div class="name">Lutetium</div>
-          </div>
-          <div class="atomic-mass">174.97</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c4 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">72</div>
-          <div class="label">
-            <div class="symbol">Hf</div>
-            <div class="name">Hafnium</div>
-          </div>
-          <div class="atomic-mass">178.49</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>10</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c5 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">73</div>
-          <div class="label">
-            <div class="symbol">Ta</div>
-            <div class="name">Tantalum</div>
-          </div>
-          <div class="atomic-mass">180.95</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>11</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c6 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">74</div>
-          <div class="label">
-            <div class="symbol">W</div>
-            <div class="name">Tungsten</div>
-          </div>
-          <div class="atomic-mass">183.84</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>12</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c7 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">75</div>
-          <div class="label">
-            <div class="symbol">Re</div>
-            <div class="name">Rhenium</div>
-          </div>
-          <div class="atomic-mass">186.21</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>13</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c8 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">76</div>
-          <div class="label">
-            <div class="symbol">Os</div>
-            <div class="name">Osmium</div>
-          </div>
-          <div class="atomic-mass">190.23</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>14</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c9 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">77</div>
-          <div class="label">
-            <div class="symbol">Ir</div>
-            <div class="name">Iridium</div>
-          </div>
-          <div class="atomic-mass">192.22</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>15</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c10 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">78</div>
-          <div class="label">
-            <div class="symbol">Pt</div>
-            <div class="name">Platinum</div>
-          </div>
-          <div class="atomic-mass">195.08</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>17</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c11 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">79</div>
-          <div class="label">
-            <div class="symbol">Au</div>
-            <div class="name">Gold</div>
-          </div>
-          <div class="atomic-mass">196.97</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c12 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">80</div>
-          <div class="label">
-            <div class="symbol">Hg</div>
-            <div class="name">Mercury</div>
-          </div>
-          <div class="atomic-mass">200.59</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c13 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">81</div>
-          <div class="label">
-            <div class="symbol">Tl</div>
-            <div class="name">Thallium</div>
-          </div>
-          <div class="atomic-mass">204.38</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>3</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c14 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">82</div>
-          <div class="label">
-            <div class="symbol">Pb</div>
-            <div class="name">Lead</div>
-          </div>
-          <div class="atomic-mass">207.2</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>4</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c15 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">83</div>
-          <div class="label">
-            <div class="symbol">Bi</div>
-            <div class="name">Bismuth</div>
-          </div>
-          <div class="atomic-mass">208.98</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>5</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c16 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">84</div>
-          <div class="label">
-            <div class="symbol">Po</div>
-            <div class="name">Polonium</div>
-          </div>
-          <div class="atomic-mass">(209)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>6</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c17 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">85</div>
-          <div class="label">
-            <div class="symbol">At</div>
-            <div class="name">Astatine</div>
-          </div>
-          <div class="atomic-mass">(210)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>7</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c18 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">86</div>
-          <div class="label">
-            <div class="symbol">Rn</div>
-            <div class="name">Radon</div>
-          </div>
-          <div class="atomic-mass">(222)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>8</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c1 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">87</div>
-          <div class="label">
-            <div class="symbol">Fr</div>
-            <div class="name">Francium</div>
-          </div>
-          <div class="atomic-mass">(223)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>8</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element selements c2 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">88</div>
-          <div class="label">
-            <div class="symbol">Ra</div>
-            <div class="name">Radium</div>
-          </div>
-          <div class="atomic-mass">(226)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c2 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">89</div>
-          <div class="label">
-            <div class="symbol">Ac</div>
-            <div class="name">Actinium</div>
-          </div>
-          <div class="atomic-mass">(227)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c3 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">90</div>
-          <div class="label">
-            <div class="symbol">Th</div>
-            <div class="name">Thorium</div>
-          </div>
-          <div class="atomic-mass">232.04</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>18</li>
-            <li>10</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c4 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">91</div>
-          <div class="label">
-            <div class="symbol">Pa</div>
-            <div class="name">Protactinium</div>
-          </div>
-          <div class="atomic-mass">231.04</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>20</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c5 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">92</div>
-          <div class="label">
-            <div class="symbol">U</div>
-            <div class="name">Uranium</div>
-          </div>
-          <div class="atomic-mass">238.03</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>21</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c6 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">93</div>
-          <div class="label">
-            <div class="symbol">Np</div>
-            <div class="name">Neptunium</div>
-          </div>
-          <div class="atomic-mass">(237)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>22</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c7 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">94</div>
-          <div class="label">
-            <div class="symbol">Pu</div>
-            <div class="name">Plutonium</div>
-          </div>
-          <div class="atomic-mass">(244)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>24</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c8 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">95</div>
-          <div class="label">
-            <div class="symbol">Am</div>
-            <div class="name">Americium</div>
-          </div>
-          <div class="atomic-mass">(243)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>25</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c9 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">96</div>
-          <div class="label">
-            <div class="symbol">Cm</div>
-            <div class="name">Curium</div>
-          </div>
-          <div class="atomic-mass">(247)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>25</li>
-            <li>9</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c10 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">97</div>
-          <div class="label">
-            <div class="symbol">Bk</div>
-            <div class="name">Berkelium</div>
-          </div>
-          <div class="atomic-mass">(247)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>27</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c11 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">98</div>
-          <div class="label">
-            <div class="symbol">Cf</div>
-            <div class="name">Californium</div>
-          </div>
-          <div class="atomic-mass">(251)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>28</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c12 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">99</div>
-          <div class="label">
-            <div class="symbol">Es</div>
-            <div class="name">Einsteinium</div>
-          </div>
-          <div class="atomic-mass">(252)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>29</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c13 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">100</div>
-          <div class="label">
-            <div class="symbol">Fm</div>
-            <div class="name">Fermium</div>
-          </div>
-          <div class="atomic-mass">(257)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>30</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c14 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">101</div>
-          <div class="label">
-            <div class="symbol">Md</div>
-            <div class="name">Mendelevium</div>
-          </div>
-          <div class="atomic-mass">(258)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>31</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c15 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">102</div>
-          <div class="label">
-            <div class="symbol">No</div>
-            <div class="name">Nobelium</div>
-          </div>
-          <div class="atomic-mass">(259)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>8</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element felements c16 r10">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">103</div>
-          <div class="label">
-            <div class="symbol">Lr</div>
-            <div class="name">Lawrencium</div>
-          </div>
-          <div class="atomic-mass">(266)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>8</li>
-            <li>3</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c4 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">104</div>
-          <div class="label">
-            <div class="symbol">Rf</div>
-            <div class="name">Rutherfordium</div>
-          </div>
-          <div class="atomic-mass">(267)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>10</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c5 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">105</div>
-          <div class="label">
-            <div class="symbol">Db</div>
-            <div class="name">Dubnium</div>
-          </div>
-          <div class="atomic-mass">(268)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>11</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c6 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">106</div>
-          <div class="label">
-            <div class="symbol">Sg</div>
-            <div class="name">Seaborgium</div>
-          </div>
-          <div class="atomic-mass">(269)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>12</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c7 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">107</div>
-          <div class="label">
-            <div class="symbol">Bh</div>
-            <div class="name">Bohrium</div>
-          </div>
-          <div class="atomic-mass">(270)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>13</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c8 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">108</div>
-          <div class="label">
-            <div class="symbol">Hs</div>
-            <div class="name">Hassium</div>
-          </div>
-          <div class="atomic-mass">(277)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>14</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c9 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">109</div>
-          <div class="label">
-            <div class="symbol">Mt</div>
-            <div class="name">Meitnerium</div>
-          </div>
-          <div class="atomic-mass">(278)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>15</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c10 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">110</div>
-          <div class="label">
-            <div class="symbol">Ds</div>
-            <div class="name">Darmstadtium</div>
-          </div>
-          <div class="atomic-mass">(281)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>17</li>
-            <li>1</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c11 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">111</div>
-          <div class="label">
-            <div class="symbol">Rg</div>
-            <div class="name">Roentgenium</div>
-          </div>
-          <div class="atomic-mass">(282)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>17</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c12 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">112</div>
-          <div class="label">
-            <div class="symbol">Cn</div>
-            <div class="name">Copernicium</div>
-          </div>
-          <div class="atomic-mass">(282)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>18</li>
-            <li>2</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c13 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">113</div>
-          <div class="label">
-            <div class="symbol">Nh</div>
-            <div class="name">Nihonium</div>
-          </div>
-          <div class="atomic-mass">(286)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>18</li>
-            <li>3</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c14 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">114</div>
-          <div class="label">
-            <div class="symbol">Fl</div>
-            <div class="name">Flerovium</div>
-          </div>
-          <div class="atomic-mass">(289)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>18</li>
-            <li>4</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c15 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">115</div>
-          <div class="label">
-            <div class="symbol">Mc</div>
-            <div class="name">Moscovium</div>
-          </div>
-          <div class="atomic-mass">(290)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>18</li>
-            <li>5</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c16 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">116</div>
-          <div class="label">
-            <div class="symbol">Lv</div>
-            <div class="name">Livermorium</div>
-          </div>
-          <div class="atomic-mass">(293)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>18</li>
-            <li>6</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c17 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">117</div>
-          <div class="label">
-            <div class="symbol">Ts</div>
-            <div class="name">Tennessine</div>
-          </div>
-          <div class="atomic-mass">(294)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>18</li>
-            <li>7</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element pelements c18 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="atomic-number">118</div>
-          <div class="label">
-            <div class="symbol">Og</div>
-            <div class="name">Oganesson</div>
-          </div>
-          <div class="atomic-mass">(294)</div>
-          <ul class="atomic-weight">
-            <li>2</li>
-            <li>8</li>
-            <li>18</li>
-            <li>32</li>
-            <li>32</li>
-            <li>18</li>
-            <li>8</li>
-          </ul>
-        </div>
-      </div>
-      <div class="element delements c3 r6">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="label">
-            <div class="name">*</div>
-            <div class="name">57-71</div>
-          </div>
-        </div>
-      </div>
-      <div class="element delements c3 r7">
-        <div class="overlay"></div>
-        <div class="square">
-          <div class="label">
-            <div class="name">**</div>
-            <div class="name">89-103</div>
-          </div>
-        </div>
-      </div>
+        <!--period numbers and name-->
+        <div class="c0 r1" style="color: rgb(255, 255, 255);">
+          <div class="row">
+            <div class="col-6">
 
-      <!--period numbers and name-->
-      <div class="c0 r1" style="color: rgb(255, 255, 255);">
-        <div class="row">
-          <div class="col-6">
-
-          </div>
-          <div class="col-6">
-            <div class="element c6 r6">
-              <div class="overlay"></div>
-              <div class="square">
-               <p style=" text-align: center;">1</p>
+            </div>
+            <div class="col-6">
+              <div class="element c6 r6">
+                <div class="square">
+                <p style=" text-align: center;">1</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="c0 r2" style="color: rgb(255, 255, 255);">
-        <div class="row">
-          <div class="col-6">
+        <div class="c0 r2" style="color: rgb(255, 255, 255);">
+          <div class="row">
+            <div class="col-6">
 
-          </div>
-          <div class="col-6">
-            <div class="element c6 r6">
-              <div class="overlay"></div>
-              <div class="square">
-                <p style=" text-align: center;">2</p>
+            </div>
+            <div class="col-6">
+              <div class="element c6 r6">
+                <div class="square">
+                  <p style=" text-align: center;">2</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="c0 r3" style="color: rgb(255, 255, 255);">
-        <div class="row">
-          <div class="col-6">
+        <div class="c0 r3" style="color: rgb(255, 255, 255);">
+          <div class="row">
+            <div class="col-6">
 
-          </div>
-          <div class="col-6">
-            <div class="element c6 r6">
-              <div class="overlay"></div>
-              <div class="square">
-                <p style=" text-align: center;">3</p>
+            </div>
+            <div class="col-6">
+              <div class="element c6 r6">
+                <div class="square">
+                  <p style=" text-align: center;">3</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="c0 r4" style="color: rgb(255, 255, 255);">
-        <div class="row">
-          <div class="col-6">
+        <div class="c0 r4" style="color: rgb(255, 255, 255);">
+          <div class="row">
+            <div class="col-6">
 
-          </div>
-          <div class="col-6">
-            <div class="element c6 r6">
-              <div class="overlay"></div>
-              <div class="square">
-                <p style=" text-align: center;">4</p>
+            </div>
+            <div class="col-6">
+              <div class="element c6 r6">
+                <div class="square">
+                  <p style=" text-align: center;">4</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="c0 r5" style="color: rgb(255, 255, 255);">
-        <div class="row">
-          <div class="col-6">
+        <div class="c0 r5" style="color: rgb(255, 255, 255);">
+          <div class="row">
+            <div class="col-6">
 
-          </div>
-          <div class="col-6">
-            <div class="element c6 r6">
-              <div class="overlay"></div>
-              <div class="square">
-                <p style=" text-align: center;">5</p>
+            </div>
+            <div class="col-6">
+              <div class="element c6 r6">
+                <div class="square">
+                  <p style=" text-align: center;">5</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="c0 r6" style="color: rgb(255, 255, 255);">
-        <div class="row">
-          <div class="col-6">
+        <div class="c0 r6" style="color: rgb(255, 255, 255);">
+          <div class="row">
+            <div class="col-6">
 
-          </div>
-          <div class="col-6">
-            <div class="element c6 r6">
-              <div class="overlay"></div>
-              <div class="square">
-                <p style=" text-align: center;">6</p>
-             </div>
+            </div>
+            <div class="col-6">
+              <div class="element c6 r6">
+                <div class="square">
+                  <p style=" text-align: center;">6</p>
+              </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="c0 r7" style="color: rgb(255, 255, 255);">
-        <div class="row">
-          <div class="col-6">
-              <p style="rotate: -90deg;">PERIODI</p>
-          </div>
-          <div class="col-6">
-            <div class="element c6 r6">
-              <div class="overlay"></div>
-              <div class="square">
-                <p style=" text-align: center;">7</p>
-             </div>
+        <div class="c0 r7" style="color: rgb(255, 255, 255);">
+          <div class="row">
+            <div class="col-6">
+                <p style="rotate: -90deg;">PERIODI</p>
+            </div>
+            <div class="col-6">
+              <div class="element c6 r6">
+                <div class="square">
+                  <p style=" text-align: center;">7</p>
+              </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!--spaces-->
+        <div class="r0"></div>
+        <div class="r8"></div>
+        <div class="r11"></div>
+        
+        <!--lan and akt names-->
+        <div class="c0 r9 " style="grid-column: 2 / span 2;">
+          <div class="element c6 r6">
+            <div class="square"  style="height: 110px;">
+              <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">Lantanoīdi*</p>
+            </div>
+          </div>
+        </div>
+        <div class="c0 r10" style="grid-column: 2 / span 2;">
+          <div class="element">
+            <div class="square" style="height: 110px;">
+              <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">Aktinoīdi**</p>
+            </div>
+          </div>
+        </div>
+
+        <!--element names-->
+        <div class="r9" style="grid-column: 19 / span 2;">
+          <div class="element">
+            <div class="square"  style="height: 55px; color: rgb(76, 105, 235)">
+              <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">s elementi</p>
+            </div>
+          </div>
+          <div class="element" style="top: -120px;">
+            <div class="square"  style="height: 55px; color: rgb(243, 233, 94);">
+              <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">p elementi</p>
+            </div>
+          </div>
+        </div>
+        <div class="r10" style="grid-column: 19 / span 2;">
+          <div class="element">
+            <div class="square"  style="height: 55px; color: rgb(201, 62, 62);">
+              <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">d elementi</p>
+            </div>
+          </div>
+          <div class="element" style="top: -120px;">
+            <div class="square"  style="height: 55px; color: rgb(43, 189, 24);;">
+              <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">f elementi</p>
+            </div>
+          </div>
+        </div>
+
+
+        <!--group numbers-->
+        <div class="c1 r0" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+            <div class="row"  style="height: 27px;"></div>
+            <p style="margin: 0;">GRUPAS</p>
+          </div>
+          <div class="row" style="height: 55px;">
+            <p style="margin: 0;">I A</p>
+            <p style="margin: 0;">1</p>
+          </div>        
+        </div>
+        <div class="c2 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">II A</p>
+          <p style="margin: 0;">2</p>
+          </div>
+        </div>
+        <div class="c3 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">III B</p>
+          <p style="margin: 0;">3</p>
+          </div>
+        </div>
+        <div class="c4 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">IV B</p>
+          <p style="margin: 0;">4</p>
+          </div>
+        </div>
+        <div class="c5 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">V B</p>
+          <p style="margin: 0;">5</p>
+          </div>
+        </div>
+        <div class="c6 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">VI B</p>
+          <p style="margin: 0;">6</p>
+          </div>
+        </div>
+        <div class="c7 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">VII B</p>
+          <p style="margin: 0;">7</p>
+          </div>
+        </div>
+        <div class="c8 r3" style="font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0; text-align: right;">-----------</p>
+          <p style="margin: 0; text-align: center;">8</p>
+          </div>
+        </div>
+        <div class="c9 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">---VIII B---</p>
+          <p style="margin: 0;">9</p>
+          </div>
+        </div>
+        <div class="c10 r3" style="font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0; text-align: left;">-----------</p>
+          <p style="margin: 0; text-align: center;">10</p>
+          </div>
+        </div>
+        <div class="c11 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">I B</p>
+          <p style="margin: 0;">11</p>
+          </div>
+        </div>
+        <div class="c12 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">II B</p>
+          <p style="margin: 0;">12</p>
+          </div>
+        </div>
+        <div class="c13 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">III A</p>
+          <p style="margin: 0;">13</p>
+          </div>
+        </div>
+        <div class="c14 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">IV A</p>
+          <p style="margin: 0;">14</p>
+          </div>
+        </div>
+        <div class="c15 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">V A</p>
+          <p style="margin: 0;">15</p>
+          </div>
+        </div>
+        <div class="c16 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">VI A</p>
+          <p style="margin: 0;">16</p>
+          </div>
+        </div>
+        <div class="c17 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">VII A</p>
+          <p style="margin: 0;">17</p>
+          </div>
+        </div>
+        <div class="c18 r0" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
+          <div class="row" style="height: 55px;">
+
+          </div>
+          <div class="row" style="height: 55px;">
+          <p style="margin: 0;">VIII A</p>
+          <p style="margin: 0;">18</p>
+          </div>
+        </div>
+
+        <div class="c16 r8" style="text-align: right; font-size: x-small; color: rgb(255, 255, 255);">
+          <p style="margin: 0;">Metāliskie</p>
+          <p>elemnti</p>
+        </div>
+        <div class="c17 r8" style="text-align: left; font-size: x-small; color: rgb(255, 0, 0);">
+          <p style="margin: 0;">Nemetāliskie</p>
+          <p>elemnti</p>
+        </div>
+
       </div>
 
-      <!--spaces-->
-      <div class="r0"></div>
-      <div class="r8"></div>
-      <div class="r11"></div>
+      <!--popup container-->
+      <div id="popup" class="popup-container" onclick="hidePopup()">
+        <img id="popupImage" class="popup-iamge" src="" alt="Popup Image">
+      </div>
       
-      <!--lan and akt names-->
-      <div class="c0 r9 " style="grid-column: 2 / span 2;">
-        <div class="element c6 r6">
-          <div class="overlay"></div>
-          <div class="square"  style="height: 110px;">
-            <p style="text-align: center; font-size: xx-large; color: rgb(255, 255, 255);">Lantanoīdi*</p>
-          </div>
-        </div>
-      </div>
-      <div class="c0 r10" style="grid-column: 2 / span 2;">
-        <div class="element">
-          <div class="overlay"></div>
-          <div class="square" style="height: 110px;">
-            <p style="text-align: center; font-size: xx-large; color: rgb(255, 255, 255);">Aktinoīdi**</p>
-          </div>
-        </div>
-      </div>
+      <!--arrows-->
 
-      <!--element names-->
-      <div class="r9" style="grid-column: 19 / span 2;">
-        <div class="element">
-          <div class="overlay"></div>
-          <div class="square"  style="height: 55px; color: rgb(76, 105, 235)">
-            <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">s elementi</p>
-          </div>
-        </div>
-        <div class="element" style="top: -120px;">
-          <div class="overlay"></div>
-          <div class="square"  style="height: 55px; color: rgb(243, 233, 94);">
-            <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">p elementi</p>
-          </div>
-        </div>
-      </div>
-      <div class="r10" style="grid-column: 19 / span 2;">
-        <div class="element">
-          <div class="overlay"></div>
-          <div class="square"  style="height: 55px; color: rgb(201, 62, 62);">
-            <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">d elementi</p>
-          </div>
-        </div>
-        <div class="element" style="top: -120px;">
-          <div class="overlay"></div>
-          <div class="square"  style="height: 55px; color: rgb(43, 189, 24);;">
-            <p style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">f elementi</p>
-          </div>
-        </div>
-      </div>
-
-      <!--group numbers-->
-      <div class="c1 r0" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-          <div class="row"  style="height: 27px;"></div>
-          <p style="margin: 0; padding: 0;">GRUPAS</p>
-        </div>
-        <div class="row" style="height: 55px;">
-          <p style="margin: 0; padding: 0;">I A</p>
-          <p style="margin: 0; padding: 0;">1</p>
-        </div>        
-      </div>
-      <div class="c2 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">II A</p>
-        <p style="margin: 0; padding: 0;">2</p>
-        </div>
-      </div>
-      <div class="c3 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">III B</p>
-        <p style="margin: 0; padding: 0;">3</p>
-        </div>
-      </div>
-      <div class="c4 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">IV B</p>
-        <p style="margin: 0; padding: 0;">4</p>
-        </div>
-      </div>
-      <div class="c5 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">V B</p>
-        <p style="margin: 0; padding: 0;">5</p>
-        </div>
-      </div>
-      <div class="c6 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">VI B</p>
-        <p style="margin: 0; padding: 0;">6</p>
-        </div>
-      </div>
-      <div class="c7 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">VII B</p>
-        <p style="margin: 0; padding: 0;">7</p>
-        </div>
-      </div>
-      <div class="c8 r3" style="font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0; text-align: right;">-----------</p>
-        <p style="margin: 0; padding: 0; text-align: center;">8</p>
-        </div>
-      </div>
-      <div class="c9 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">---VIII B---</p>
-        <p style="margin: 0; padding: 0;">9</p>
-        </div>
-      </div>
-      <div class="c10 r3" style="font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0; text-align: left;">-----------</p>
-        <p style="margin: 0; padding: 0; text-align: center;">10</p>
-        </div>
-      </div>
-      <div class="c11 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">I B</p>
-        <p style="margin: 0; padding: 0;">11</p>
-        </div>
-      </div>
-      <div class="c12 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">II B</p>
-        <p style="margin: 0; padding: 0;">12</p>
-        </div>
-      </div>
-      <div class="c13 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">III A</p>
-        <p style="margin: 0; padding: 0;">13</p>
-        </div>
-      </div>
-      <div class="c14 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">IV A</p>
-        <p style="margin: 0; padding: 0;">14</p>
-        </div>
-      </div>
-      <div class="c15 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">V A</p>
-        <p style="margin: 0; padding: 0;">15</p>
-        </div>
-      </div>
-      <div class="c16 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">VI A</p>
-        <p style="margin: 0; padding: 0;">16</p>
-        </div>
-      </div>
-      <div class="c17 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">VII A</p>
-        <p style="margin: 0; padding: 0;">17</p>
-        </div>
-      </div>
-      <div class="c18 r0" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-        <div class="row" style="height: 55px;">
-
-        </div>
-        <div class="row" style="height: 55px;">
-        <p style="margin: 0; padding: 0;">VIII A</p>
-        <p style="margin: 0; padding: 0;">18</p>
-        </div>
-      </div>
-    </div>
-
-    <!--arrows-->
-    <div class="r12" style="grid-column: 19 / span 2;">
-      
 
     </div>
   </body>
 </html>
+
+
+
+
