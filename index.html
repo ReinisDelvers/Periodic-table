@@ -144,16 +144,14 @@
       function hidePopup() {
         document.getElementById("popup").style.display = "none";
       }
-
-      function el21() {
-        document.getElementById("dv").style.display = "none";
-      }
-
-      if(0==0) {
-        el21()
-      }
       
     </script>
+
+
+    <!--button changes-->
+    <style>
+      
+    </style>
 
 
     <!--element colors-->
@@ -360,7 +358,7 @@
     <div class="container--">
       <div class="grid">
          <!--1 Colonna-->
-        <a href="javascript:void(0);" class="element selements c1 r1 clickable-cell" onclick="showPopup('https://pediaa.com/wp-content/uploads/2023/06/hydrogen-atom.png');">
+        <a id="H" href="javascript:void(0);" class="element selements c1 r1 clickable-cell" onclick="showPopup('https://pediaa.com/wp-content/uploads/2023/06/hydrogen-atom.png');">
           <div class="square">
             <div class="atomic-number">1</div>
             <div class="label">
@@ -578,7 +576,7 @@
         
 
         <!--3 colonna-->
-        <a id="dv" href="javascript:void(0);" class="element delements c3 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/e/e6/Scandium_sublimed_dendritic_and_1cm3_cube.jpg')">
+        <a href="javascript:void(0);" class="element delements c3 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/e/e6/Scandium_sublimed_dendritic_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">21</div>
             <div class="label">
@@ -2744,7 +2742,7 @@
         
 
         <!--year interval-->
-        <div class="r12" style="color: rgb(255, 255, 255); grid-column: 7 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+        <div class="r12" onclick="minusOne()" style="color: rgb(255, 255, 255); grid-column: 7 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
           <div class="element1" style="height: 55px; width: 100%;">
             <div class="square">
              <p style="margin: 0;">iepriekšējie desmit gadi</p> 
@@ -2758,7 +2756,7 @@
             </div>
           </div>
         </div>
-        <div class="r12" style="color: rgb(255, 255, 255); grid-column: 13 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+        <div class="r12" onclick="plusOne()" style="color: rgb(255, 255, 255); grid-column: 13 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
           <div class="element1" style="height: 55px; width: 100%;">
             <div class="square">
               <p style="margin: 0;">nākamie desmit gadi</p>
@@ -2787,7 +2785,3 @@
     </div>
   </body>
 </html>
-
-
-
-
