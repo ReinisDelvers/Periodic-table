@@ -2,10 +2,11 @@
 
 <html>
   <head>
-
+    <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
+
     <!--general style-->
     <style>
     body {
@@ -13,16 +14,22 @@
       text-shadow: 0 0 0.4vw currentColor;
     }
 
-    .periodic-table {
+    .grid {
       display: grid;
       grid-gap: 5px;
       grid-auto-columns: minmax(0, 1fr);
-   grid-auto-flow: column;
+      grid-auto-flow: column;
     }
 
     .element {
       position: relative;
       font-size: 0.5vw;
+    }
+
+    .element1 {
+      position: relative;
+      font-size: 1vw;
+      
     }
 
     .square {
@@ -59,7 +66,14 @@
       transform: translateX(100%);
     }
 
-
+    .square3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid;
+      background: rgb(0, 0, 0);
+      padding: 10px;
+    }
 
     .atomic-number {
       position: absolute;
@@ -100,9 +114,9 @@
 
     </style>
 
+
     <!--clickable grid-->
     <style>
-
       .popup-container {
         display: none;
         position: fixed;
@@ -133,8 +147,8 @@
       
     </script>
 
+
     <!--element colors-->
-    
     <style>
     .selements {
       color: rgb(76, 105, 235);
@@ -152,9 +166,8 @@
       color: rgb(43, 189, 24);
     }
 
-
-
     </style>
+
 
     <!--table setup-->
     <style>
@@ -200,7 +213,7 @@
 
     .r8 {
       grid-row: 9;
-      height: 110px;
+      height: 32px;
     }
 
     .r9 {
@@ -215,12 +228,28 @@
 
     .r11 {
       grid-row: 12;
-      height: 110px;
+      height: 32px;
     }
 
     .r12 {
       grid-row: 13;
-      height: 110px;
+      height: 100%;
+    }
+    
+
+    .r13 {
+      grid-row: 15;
+      height: 32px;
+    }
+
+    .r14 {
+      grid-row: 16;
+      height: 220px;
+    }
+
+    .r15 {
+      grid-row: 16;
+      height: 1100px;
     }
 
     .c-1 {
@@ -306,7 +335,7 @@
     .c19 {
       grid-column: 21;
     }
-    
+        
     </style>
   </head>
 
@@ -318,9 +347,11 @@
       <h1 style="text-align: center; color: rgb(255, 255, 255);">ĶĪMISKO ELEMENTU PERIODISKĀ TABULA</h1>
     </div>
 
-    <!--periodic table-->
+
+    <!--grid-->
     <div class="container--">
-      <div class="periodic-table">
+      <div class="grid">
+         <!--1 Colonna-->
         <a href="#" class="element selements c1 r1 clickable-cell" onclick="showPopup('https://pediaa.com/wp-content/uploads/2023/06/hydrogen-atom.png');">
           <div class="square">
             <div class="atomic-number">1</div>
@@ -434,8 +465,9 @@
             </ul>
           </div>
         </a>
-       <!-- ^^^ 1 Colonna ^^^ -->
        
+
+        <!--2 Colonna-->
         <a href="#" class="element selements c2 r2 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/07/Beryllium.jpg')">
           <div class="square">
             <div class="atomic-number">4</div>
@@ -535,7 +567,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 2 Colonna ^^^ -->
+        
+
+        <!--3 colonna-->
         <a href="#" class="element delements c3 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/e/e6/Scandium_sublimed_dendritic_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">21</div>
@@ -585,7 +619,9 @@
             </div>
           </div>
         </div>
-        <!-- ^^^ 3 colonna ^^^-->
+        
+
+        <!--4 colonna-->
         <a href="#" class="element delements c4 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/db/Titan-crystal_bar.JPG')">
           <div class="square">
             <div class="atomic-number">22</div>
@@ -656,7 +692,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 4 colonna ^^^ -->
+        
+
+        <!--5 colonna-->
         <a href="#" class="element delements c5 r4 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2018/11/Vanadium.jpg?fit=225%2C225&ssl=1')">
           <div class="square">
             <div class="atomic-number">23</div>
@@ -727,7 +765,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 5 colonna ^^^ -->
+        
+
+        <!--6 colonna-->
         <a href="#" class="element delements c6 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/08/Chromium_crystals_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">24</div>
@@ -798,7 +838,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 6 colonna ^^^ -->
+        
+
+        <!--7 colonna-->
         <a href="#" class="element delements c7 r4 clickable-cell" onclick="showPopup('https://cdn.britannica.com/75/126275-050-CEB51BC1/Manganese.jpg')">
           <div class="square">
             <div class="atomic-number">25</div>
@@ -869,7 +911,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 7 colonna ^^^ -->
+        
+
+        <!--8 colonna-->
         <a href="#" class="element delements c8 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Iron_electrolytic_and_1cm3_cube.jpg/640px-Iron_electrolytic_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">26</div>
@@ -940,7 +984,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 8 colonna ^^^ -->
+        
+
+        <!--9 colonna-->
         <a href="#" class="element delements c9 r4 clickable-cell" onclick="showPopup('https://www.nationaldefensemagazine.org/-/media/sites/magazine/2022/08/kobalt_electrolytic_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">27</div>
@@ -1011,7 +1057,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 9 colonna ^^^ -->
+        
+
+        <!--10 colonna-->
         <a href="#" class="element delements c10 r4 clickable-cell" onclick="showPopup('https://images.prismic.io/xometry-marketing/525a8ef9-1bd1-47fa-a58a-7a607ac75456_nickel.jpg?auto=compress%2Cformat&rect=143%2C0%2C714%2C714&w=486&h=486&fit=max')">
           <div class="square">
             <div class="atomic-number">28</div>
@@ -1081,7 +1129,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 10 colonna ^^^ -->
+        
+
+        <!--11 colonna-->
         <a href="#" class="element delements c11 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NatCopper.jpg/1200px-NatCopper.jpg')">
           <div class="square">
             <div class="atomic-number">29</div>
@@ -1152,7 +1202,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 11 colonna ^^^ -->
+        
+
+        <!--12 colonna-->
         <a href="#" class="element delements c12 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/f/f9/Zinc_fragment_sublimed_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">30</div>
@@ -1223,7 +1275,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 12 colonna ^^^ -->
+        
+
+        <!--13 colonna-->
         <a href="#" class="element pelements c13 r2 clickable-cell" onclick="showPopup('https://www.clinicaladvisor.com/wp-content/uploads/sites/11/2018/12/0817altmedsboron_1268589-860x573.jpg')">
           <div class="square">
             <div class="atomic-number">5</div>
@@ -1323,7 +1377,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 13 colonna ^^^ -->
+        
+
+        <!--14 colonna-->
         <a href="#" class="element pelements c14 r2 clickable-cell" onclick="showPopup('https://static.dezeen.com/uploads/2021/06/Dezeen-guide-to-carbon_01-hero-852x479.jpg')">
           <div class="square">
             <div class="atomic-number">6</div>
@@ -1423,7 +1479,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 14 colonna ^^^ -->
+        
+
+        <!--15 colonna-->
         <a href="#" class="element pelements c15 r2 clickable-cell" onclick="showPopup('https://www.nexair.com/wp-content/uploads/2022/08/What-are-the-4-major-uses-of-nitrogen_.jpg')">
           <div class="square">
             <div class="atomic-number">7</div>
@@ -1523,7 +1581,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 15 colonna ^^^ -->
+        
+
+        <!--16 colonna-->
         <a href="#" class="element pelements c16 r2 clickable-cell" onclick="showPopup('https://science4fun.info/wp-content/uploads/2017/08/oxygen-atom.jpg')">
           <div class="square">
             <div class="atomic-number">8</div>
@@ -1623,7 +1683,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 16 colonna ^^^ -->
+        
+
+        <!--17 colonna-->
         <a href="#" class="element pelements c17 r2 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/4zYbLgfshv9n1n4nMueNC1Aw9eU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fluorinesimulant-56a12c323df78cf772681c61.jpg')">
           <div class="square">
             <div class="atomic-number">9</div>
@@ -1723,7 +1785,9 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 17 colonna ^^^ -->
+
+
+        <!--18 colonna-->
         <a href="#" class="element selements c18 r1 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQtcV1_17QJ_8kz2Qkid0m1SCD3jh0v5g-Kg&usqp=CAU');">
           <div class="square">
             <div class="atomic-number">2</div>
@@ -1836,11 +1900,11 @@
             </ul>
           </div>
         </a>
-        <!-- ^^^ 18 colonna ^^^-->
+        
 
         <!-- LANTANOĪDI UN AKTINOĪDI-->
 
-        <!-- Lantanoīdi, Aktinoīdi, 1 kolonna-->
+        <!--1 kolonna-->
         <a href="#" class="element delements c2 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/8/8c/Lanthanum-2.jpg')">
           <div class="square">
             <div class="atomic-number">57</div>
@@ -1878,9 +1942,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 2 kolonna-->
+
+        <!--2 kolonna-->
         <a href="#" class="element felements c3 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cerium2.jpg/640px-Cerium2.jpg')">
           <div class="square">
             <div class="atomic-number">58</div>
@@ -1918,9 +1982,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 3 kolonna-->
+
+        <!--3 kolonna-->
         <a href="#" class="element felements c4 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/c/c7/Praseodymium.jpg')">
           <div class="square">
             <div class="atomic-number">59</div>
@@ -1958,9 +2022,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 4 kolonna-->
+
+        <!--4 kolonna-->
         <a href="#" class="element felements c5 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/ba/Neodymium2.jpg')">
           <div class="square">
             <div class="atomic-number">60</div>
@@ -1998,9 +2062,9 @@
             </ul>
           </div>
         </a>
-        <!---->
+
         
-        <!-- Lantanoīdi, Aktinoīdi, 5 kolonna-->
+        <!--5 kolonna-->
         <a href="#" class="element felements c6 r9 clickable-cell" onclick="showPopup('https://static.wikia.nocookie.net/neventale/images/5/5b/Promethium.jpg/revision/latest?cb=20130507210743');">
           <div class="square">
             <div class="atomic-number">61</div>
@@ -2038,9 +2102,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 6 kolonna-->
+
+        <!--6 kolonna-->
         <a href="#" class="element felements c7 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/8/88/Samarium-2.jpg');">
           <div class="square">
             <div class="atomic-number">62</div>
@@ -2078,9 +2142,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 7 kolonna-->
+
+        <!--7 kolonna-->
         <a href="#" class="element felements c8 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Europium.jpg/640px-Europium.jpg');">
           <div class="square">
             <div class="atomic-number">63</div>
@@ -2118,9 +2182,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 8 kolonna-->
+
+        <!--8 kolonna-->
         <a href="#" class="element felements c9 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d1/Gadolinium-4.jpg');">
           <div class="square">
             <div class="atomic-number">64</div>
@@ -2158,9 +2222,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 9 kolonna-->
+
+        <!--9 kolonna-->
         <a href="#" class="element felements c10 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/9a/Terbium-2.jpg');">
           <div class="square">
             <div class="atomic-number">65</div>
@@ -2198,9 +2262,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 10 kolonna-->
+
+        <!--10 kolonna-->
         <a href="#" class="element felements c11 r9 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/2uVS3jDL5aFJvcokmXEKBvUlvc8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Dy-Metal-2-56a613dd5f9b58b7d0dfcc4a.jpg');">
           <div class="square">
             <div class="atomic-number">66</div>
@@ -2238,9 +2302,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 11 kolonna-->
+
+        <!--11 kolonna-->
         <a href="#" class="element felements c12 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/0a/Holmium2.jpg');">
           <div class="square">
             <div class="atomic-number">67</div>
@@ -2278,9 +2342,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 12 kolonna-->
+
+        <!--12 kolonna-->
         <a href="#" class="element felements c13 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/12/Erbium-crop.jpg');">
           <div class="square">
             <div class="atomic-number">68</div>
@@ -2318,9 +2382,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 13 kolonna-->
+
+        <!--13 kolonna-->
         <a href="#" class="element felements c14 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/1e/Thulium_sublimed_dendritic_and_1cm3_cube.jpg');">
           <div class="square">
             <div class="atomic-number">69</div>
@@ -2358,9 +2422,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 14 kolonna-->
+
+        <!--14 kolonna-->
         <a href="#" class="element felements c15 r9 clickable-cell" onclick="showPopup('https://www.mindat.org/imagecache/89/b1/08315760014961428758196.jpg');">
           <div class="square">
             <div class="atomic-number">70</div>
@@ -2398,9 +2462,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
-        <!-- Lantanoīdi, Aktinoīdi, 15 kolonna-->
+
+        <!--15 kolonna-->
         <a href="#" class="element felements c16 r9 clickable-cell" onclick="showPopup('https://sciencenotes.org/wp-content/uploads/2017/09/lutetium.jpg');">
           <div class="square">
             <div class="atomic-number">71</div>
@@ -2438,10 +2502,9 @@
             </ul>
           </div>
         </a>
-        <!---->
 
 
-        <!--period numbers and name-->
+        <!--period name and numbers-->
         <div class="c0 r1" style="color: rgb(255, 255, 255);">
           <div class="square2">
             <p style="font-size: medium;">1</p>
@@ -2486,20 +2549,22 @@
         <div class="r0"></div>
         <div class="r8"></div>
         <div class="r11"></div>
+        <div class="r13"></div>
+        <div class="r15"></div>
         <div class="c-1"></div>
         <div class="c19"></div>
         
 
         <!--lan and akt names-->
-        <div class="c0 r9 " style="grid-column: 2 / span 2;">
-          <div class="element" style=" height: 100%;">
+        <div class="r9 " style="grid-column: 2 / span 2;">
+          <div class="element1" style=" height: 100%;">
             <div class="square" style="color: rgb(255, 255, 255);">
               <p style="font-size: medium; color: rgb(255, 255, 255);">Lantanoīdi*</p>
             </div>
           </div>
         </div>
-        <div class="c0 r10" style="grid-column: 2 / span 2;">
-          <div class="element" style=" height: 100%;">
+        <div class="r10" style="grid-column: 2 / span 2;">
+          <div class="element1" style=" height: 100%;">
             <div class="square" style="color: rgb(255, 255, 255);">
               <p style="font-size: medium; color: rgb(255, 255, 255);">Aktinoīdi**</p>
             </div>
@@ -2508,7 +2573,7 @@
 
 
         <!--element explanations-->
-        <div class="c19 r9" style="grid-column: 19 / span 2;">
+        <div class="r9" style="grid-column: 19 / span 2;">
           <div class="square1" style="color: rgb(76, 105, 235);">
             <p style="font-size: medium; color: rgb(255, 255, 255);">s elementi</p>
           </div>
@@ -2516,7 +2581,7 @@
             <p style="font-size: medium; color: rgb(255, 255, 255);">p elementi</p>
           </div>
         </div>
-        <div class="c19 r10" style="grid-column: 19 / span 2;">
+        <div class="r10" style="grid-column: 19 / span 2;">
           <div class="square1" style="color: rgb(201, 62, 62);">
             <p style="font-size: medium; color: rgb(255, 255, 255);">d elementi</p>
           </div>
@@ -2538,9 +2603,7 @@
           </div>        
         </div>
         <div class="c2 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">II A</p>
           <p style="margin: 0;">2</p>
@@ -2548,7 +2611,6 @@
         </div>
         <div class="c3 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
           <div class="row" style="height: 55px;">
-
           </div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">III B</p>
@@ -2556,141 +2618,113 @@
           </div>
         </div>
         <div class="c4 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">IV B</p>
           <p style="margin: 0;">4</p>
           </div>
         </div>
         <div class="c5 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">V B</p>
           <p style="margin: 0;">5</p>
           </div>
         </div>
         <div class="c6 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">VI B</p>
           <p style="margin: 0;">6</p>
           </div>
         </div>
         <div class="c7 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">VII B</p>
           <p style="margin: 0;">7</p>
           </div>
         </div>
         <div class="c8 r3" style="font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0; text-align: right;"><---</p>
           <p style="margin: 0; text-align: center;">8</p>
           </div>
         </div>
         <div class="c9 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">VIII B</p>
           <p style="margin: 0;">9</p>
           </div>
         </div>
         <div class="c10 r3" style="font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0; text-align: left;">---></p>
           <p style="margin: 0; text-align: center;">10</p>
           </div>
         </div>
         <div class="c11 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">I B</p>
           <p style="margin: 0;">11</p>
           </div>
         </div>
         <div class="c12 r3" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">II B</p>
           <p style="margin: 0;">12</p>
           </div>
         </div>
         <div class="c13 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">III A</p>
           <p style="margin: 0;">13</p>
           </div>
         </div>
         <div class="c14 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">IV A</p>
           <p style="margin: 0;">14</p>
           </div>
         </div>
         <div class="c15 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">V A</p>
           <p style="margin: 0;">15</p>
           </div>
         </div>
         <div class="c16 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">VI A</p>
           <p style="margin: 0;">16</p>
           </div>
         </div>
         <div class="c17 r1" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">VII A</p>
           <p style="margin: 0;">17</p>
           </div>
         </div>
         <div class="c18 r0" style="text-align: center; font-size: medium; color: rgb(255, 255, 255);">
-          <div class="row" style="height: 55px;">
-
-          </div>
+          <div class="row" style="height: 55px;"></div>
           <div class="row" style="height: 55px;">
           <p style="margin: 0;">VIII A</p>
           <p style="margin: 0;">18</p>
           </div>
         </div>
 
+
+        <!--Met and Nemet name-->
         <div class="c16 r8" style="text-align: right; font-size: x-small; color: rgb(255, 255, 255);">
           <p style="margin: 0;">Metāliskie</p>
           <p>elemnti</p>
@@ -2699,6 +2733,41 @@
           <p style="margin: 0;">Nemetāliskie</p>
           <p>elemnti</p>
         </div>
+        
+
+        <!--year interval-->
+        <div class="r12" style="color: rgb(255, 255, 255); grid-column: 7 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+          <div class="element1" style="height: 55px; width: 100%;">
+            <div class="square">
+             <p style="margin: 0;">iepriekšējie desmit gadi</p> 
+            </div>
+          </div>
+        </div>
+        <div class="r12" style="color: rgb(255, 255, 255); grid-column: 10 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+          <div class="element1" style="height: 55px; width: 100%;">
+            <div class="square">
+             <p style="margin: 0;">(1965-1975)</p> 
+            </div>
+          </div>
+        </div>
+        <div class="r12" style="color: rgb(255, 255, 255); grid-column: 13 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+          <div class="element1" style="height: 55px; width: 100%;">
+            <div class="square">
+              <p style="margin: 0;">nākamie desmit gadi</p>
+            </div>
+          </div>
+        </div>
+
+
+        <!--year changes-->
+        <div class="r14" style="color: rgb(255, 255, 255); grid-column: 6 / span 11;">
+          <div class="element1" style=" height: 100%;">
+            <div class="square3">
+              <p style="font-size: larger; color: rgb(255, 255, 255);">Dubnium (L Berkeley Lab, USA - Dubna Lab, Russia 1967)</p>
+              <p style="font-size: larger; color: rgb(255, 255, 255);">Seaborgium (L Berkeley Lab, USA - Dubna Lab, Russia 1974)</p>
+            </div>
+          </div>
+        </div>
       </div>
 
 
@@ -2706,11 +2775,7 @@
       <div id="popup" class="popup-container" onclick="hidePopup()">
         <img id="popupImage" class="popup-iamge" src="">
       </div>
-      
-      
-      <!--arrows-->
-
-
+    
     </div>
   </body>
 </html>
