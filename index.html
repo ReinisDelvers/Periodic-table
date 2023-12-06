@@ -115,6 +115,22 @@
     </style>
 
 
+      // var i=1;
+
+      function minusOne() {
+        let i = document.getElementById("skaitlis").innerHTML
+        console.log(i)
+        i--
+        document.getElementById("skaitlis").innerHTML = i
+      }
+
+      function minusPlus() {
+        i++
+      }
+
+    </script>
+
+
     <!--clickable grid-->
     <style>
       .popup-container {
@@ -146,12 +162,6 @@
       }
       
     </script>
-
-
-    <!--button changes-->
-    <style>
-      
-    </style>
 
 
     <!--element colors-->
@@ -349,13 +359,17 @@
     <br>
     <!--Title-->
     <title>ĶĪMISKO ELEMENTU PERIODISKĀ TABULA</title>
+
+    <div id="skaitlis">6</div>
+
+
     <div>
       <h1 style="text-align: center; color: rgb(255, 255, 255);">ĶĪMISKO ELEMENTU PERIODISKĀ TABULA</h1>
     </div>
 
 
     <!--grid-->
-    <div class="container--">
+    <div class="container-fluid">
       <div class="grid">
          <!--1 Colonna-->
         <a id="H" href="javascript:void(0);" class="element selements c1 r1 clickable-cell" onclick="showPopup('https://pediaa.com/wp-content/uploads/2023/06/hydrogen-atom.png');">
@@ -371,7 +385,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c1 r2 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/EftNGVICItV2yU86GE2JcAUY3V4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Limetal-5c699dfdc9e77c00014763c6.JPG')">
+        <a id="Li" href="javascript:void(0);" class="element selements c1 r2 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/EftNGVICItV2yU86GE2JcAUY3V4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Limetal-5c699dfdc9e77c00014763c6.JPG')">
           <div class="square">
             <div class="model">
             </div>
@@ -386,7 +400,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c1 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/2/27/Na_%28Sodium%29.jpg')">
+        <a id="Na" href="javascript:void(0);" class="element selements c1 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/2/27/Na_%28Sodium%29.jpg')">
           <div class="square">
             <div class="atomic-number">11</div>
             <div class="label">
@@ -401,7 +415,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c1 r4 clickable-cell" onclick="showPopup('https://cdn.britannica.com/77/131177-050-79292189/fragments-Potassium-metal.jpg')">
+        <a id="K" href="javascript:void(0);" class="element selements c1 r4 clickable-cell" onclick="showPopup('https://cdn.britannica.com/77/131177-050-79292189/fragments-Potassium-metal.jpg')">
           <div class="square">
             <div class="atomic-number">19</div>
             <div class="label">
@@ -417,7 +431,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c1 r5 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2018/11/Rubidium.jpg?fit=252%2C200&ssl=1')">
+        <a id="Rb" href="javascript:void(0);" class="element selements c1 r5 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2018/11/Rubidium.jpg?fit=252%2C200&ssl=1')">
           <div class="square">
             <div class="atomic-number">37</div>
             <div class="label">
@@ -434,7 +448,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c1 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/3/3d/Cesium.jpg')">
+        <a id="Cs" href="javascript:void(0);" class="element selements c1 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/3/3d/Cesium.jpg')">
           <div class="square">
             <div class="atomic-number">55</div>
             <div class="label">
@@ -452,7 +466,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c1 r7 clickable-cell" onclick="showPopup('https://www.arhse.com/wp-content/uploads/2023/01/francium.png');">
+        <a id="Fr" href="javascript:void(0);" class="element selements c1 r7 clickable-cell" onclick="showPopup('https://www.arhse.com/wp-content/uploads/2023/01/francium.png');">
           <div class="square">
             <div class="atomic-number">87</div>
             <div class="label">
@@ -471,10 +485,10 @@
             </ul>
           </div>
         </a>
-       
+        
 
         <!--2 Colonna-->
-        <a href="javascript:void(0);" class="element selements c2 r2 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/07/Beryllium.jpg')">
+        <a id="Be" href="javascript:void(0);" class="element selements c2 r2 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/07/Beryllium.jpg')">
           <div class="square">
             <div class="atomic-number">4</div>
             <div class="label">
@@ -488,7 +502,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c2 r3 clickable-cell" onclick="showPopup('https://cdn.britannica.com/38/131138-050-62E0CD67/Magnesium-magnesium-crystals-processing-crust-Earth.jpg')">
+        <a id="Mg" href="javascript:void(0);" class="element selements c2 r3 clickable-cell" onclick="showPopup('https://cdn.britannica.com/38/131138-050-62E0CD67/Magnesium-magnesium-crystals-processing-crust-Earth.jpg')">
           <div class="square">
             <div class="atomic-number">12</div>
             <div class="label">
@@ -503,7 +517,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c2 r4 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/09/Calcium-Metal.jpg')">
+        <a id="Ca" href="javascript:void(0);" class="element selements c2 r4 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/09/Calcium-Metal.jpg')">
           <div class="square">
             <div class="atomic-number">20</div>
             <div class="label">
@@ -519,7 +533,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c2 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Strontium_destilled_crystals.jpg/220px-Strontium_destilled_crystals.jpg')">
+        <a id="Sr" href="javascript:void(0);" class="element selements c2 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Strontium_destilled_crystals.jpg/220px-Strontium_destilled_crystals.jpg')">
           <div class="square">
             <div class="atomic-number">38</div>
             <div class="label">
@@ -536,7 +550,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c2 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/16/Barium_unter_Argon_Schutzgas_Atmosph%C3%A4re.jpg')">
+        <a id="Ba" href="javascript:void(0);" class="element selements c2 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/16/Barium_unter_Argon_Schutzgas_Atmosph%C3%A4re.jpg')">
           <div class="square">
             <div class="atomic-number">56</div>
             <div class="label">
@@ -554,7 +568,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element selements c2 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/bb/Radium226.jpg');">
+        <a id="Ra" href="javascript:void(0);" class="element selements c2 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/bb/Radium226.jpg');">
           <div class="square">
             <div class="atomic-number">88</div>
             <div class="label">
@@ -576,7 +590,7 @@
         
 
         <!--3 colonna-->
-        <a href="javascript:void(0);" class="element delements c3 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/e/e6/Scandium_sublimed_dendritic_and_1cm3_cube.jpg')">
+        <a id="Sc" href="javascript:void(0);" class="element delements c3 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/e/e6/Scandium_sublimed_dendritic_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">21</div>
             <div class="label">
@@ -592,7 +606,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c3 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/19/Yttrium_sublimed_dendritic_and_1cm3_cube.jpg')">
+        <a id="Y" href="javascript:void(0);" class="element delements c3 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/19/Yttrium_sublimed_dendritic_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">39</div>
             <div class="label">
@@ -628,7 +642,7 @@
         
 
         <!--4 colonna-->
-        <a href="javascript:void(0);" class="element delements c4 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/db/Titan-crystal_bar.JPG')">
+        <a id="Ti" href="javascript:void(0);" class="element delements c4 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/db/Titan-crystal_bar.JPG')">
           <div class="square">
             <div class="atomic-number">22</div>
             <div class="label">
@@ -644,7 +658,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c4 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/92/Zirconium_crystal_bar_and_1cm3_cube.jpg')">
+        <a id="Zr" href="javascript:void(0);" class="element delements c4 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/92/Zirconium_crystal_bar_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">40</div>
             <div class="label">
@@ -661,7 +675,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c4 r6 clickable-cell" onclick="showPopup('https://cdn.mos.cms.futurecdn.net/476mwLnFvNQhpUyNpNu2zn.jpg');">
+        <a id="Hf" href="javascript:void(0);" class="element delements c4 r6 clickable-cell" onclick="showPopup('https://cdn.mos.cms.futurecdn.net/476mwLnFvNQhpUyNpNu2zn.jpg');">
           <div class="square">
             <div class="atomic-number">72</div>
             <div class="label">
@@ -679,7 +693,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c4 r7 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3dR_pgmRQQbNuwktaanCJli2bBJ1V9KGwVUjnr40kbTpGSIIA1hEuOaIQkKdREsD2nQ&usqp=CAU');">
+        <a id="Rf" href="javascript:void(0);" class="element delements c4 r7 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3dR_pgmRQQbNuwktaanCJli2bBJ1V9KGwVUjnr40kbTpGSIIA1hEuOaIQkKdREsD2nQ&usqp=CAU');">
           <div class="square">
             <div class="atomic-number">104</div>
             <div class="label">
@@ -701,7 +715,7 @@
         
 
         <!--5 colonna-->
-        <a href="javascript:void(0);" class="element delements c5 r4 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2018/11/Vanadium.jpg?fit=225%2C225&ssl=1')">
+        <a id="V" href="javascript:void(0);" class="element delements c5 r4 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2018/11/Vanadium.jpg?fit=225%2C225&ssl=1')">
           <div class="square">
             <div class="atomic-number">23</div>
             <div class="label">
@@ -717,7 +731,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c5 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/f/f2/Niobium_crystals_and_1cm3_cube.jpg')">
+        <a id="Nb" href="javascript:void(0);" class="element delements c5 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/f/f2/Niobium_crystals_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">41</div>
             <div class="label">
@@ -734,7 +748,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c5 r6 clickable-cell" onclick="showPopup('https://d2ttikhf7xbzbs.cloudfront.net/minerals/tantalum.jpg');">
+        <a id="Ta" href="javascript:void(0);" class="element delements c5 r6 clickable-cell" onclick="showPopup('https://d2ttikhf7xbzbs.cloudfront.net/minerals/tantalum.jpg');">
           <div class="square">
             <div class="atomic-number">73</div>
             <div class="label">
@@ -752,7 +766,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c5 r7 clickable-cell" onclick="showPopup('https://whatmaster.com/wp-content/uploads/2020/10/Einsteinium-L-min-6.jpg');">
+        <a id="Db" href="javascript:void(0);" class="element delements c5 r7 clickable-cell" onclick="showPopup('https://whatmaster.com/wp-content/uploads/2020/10/Einsteinium-L-min-6.jpg');">
           <div class="square">
             <div class="atomic-number">105</div>
             <div class="label">
@@ -774,7 +788,7 @@
         
 
         <!--6 colonna-->
-        <a href="javascript:void(0);" class="element delements c6 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/08/Chromium_crystals_and_1cm3_cube.jpg')">
+        <a id="Cr" href="javascript:void(0);" class="element delements c6 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/08/Chromium_crystals_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">24</div>
             <div class="label">
@@ -790,7 +804,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c6 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/3/32/Molybdenum_crystaline_fragment_and_1cm3_cube.jpg')">
+        <a id="Mo" href="javascript:void(0);" class="element delements c6 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/3/32/Molybdenum_crystaline_fragment_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">42</div>
             <div class="label">
@@ -807,7 +821,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c6 r6 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/i-EOfIaPD2pYYCNb82t6dqGD788=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Wolfram_evaporated_crystals_and_1cm3_cube-59a0d54a22fa3a00103a2700.jpg');">
+        <a id="W" href="javascript:void(0);" class="element delements c6 r6 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/i-EOfIaPD2pYYCNb82t6dqGD788=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Wolfram_evaporated_crystals_and_1cm3_cube-59a0d54a22fa3a00103a2700.jpg');">
           <div class="square">
             <div class="atomic-number">74</div>
             <div class="label">
@@ -825,7 +839,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c6 r7 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/01/Seaborgium.jpg');">
+        <a id="Sg" href="javascript:void(0);" class="element delements c6 r7 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/01/Seaborgium.jpg');">
           <div class="square">
             <div class="atomic-number">106</div>
             <div class="label">
@@ -847,7 +861,7 @@
         
 
         <!--7 colonna-->
-        <a href="javascript:void(0);" class="element delements c7 r4 clickable-cell" onclick="showPopup('https://cdn.britannica.com/75/126275-050-CEB51BC1/Manganese.jpg')">
+        <a id="Mn" href="javascript:void(0);" class="element delements c7 r4 clickable-cell" onclick="showPopup('https://cdn.britannica.com/75/126275-050-CEB51BC1/Manganese.jpg')">
           <div class="square">
             <div class="atomic-number">25</div>
             <div class="label">
@@ -863,7 +877,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c7 r5 clickable-cell" onclick="showPopup('https://www.industrialheating.com/ext/resources/2018-Experts-Speak/082218-DanH-1.jpg?t=1534944957&width=696')">
+        <a id="Tc" href="javascript:void(0);" class="element delements c7 r5 clickable-cell" onclick="showPopup('https://www.industrialheating.com/ext/resources/2018-Experts-Speak/082218-DanH-1.jpg?t=1534944957&width=696')">
           <div class="square">
             <div class="atomic-number">43</div>
             <div class="label">
@@ -880,7 +894,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c7 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Rhenium_single_crystal_bar_and_1cm3_cube.jpg/1200px-Rhenium_single_crystal_bar_and_1cm3_cube.jpg');">
+        <a id="Re" href="javascript:void(0);" class="element delements c7 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Rhenium_single_crystal_bar_and_1cm3_cube.jpg/1200px-Rhenium_single_crystal_bar_and_1cm3_cube.jpg');">
           <div class="square">
             <div class="atomic-number">75</div>
             <div class="label">
@@ -898,7 +912,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c7 r7 clickable-cell" onclick="showPopup('https://periodiske-system.dk/img/images/lowRes/107.jpg');">
+        <a id="Bh" href="javascript:void(0);" class="element delements c7 r7 clickable-cell" onclick="showPopup('https://periodiske-system.dk/img/images/lowRes/107.jpg');">
           <div class="square">
             <div class="atomic-number">107</div>
             <div class="label">
@@ -920,7 +934,7 @@
         
 
         <!--8 colonna-->
-        <a href="javascript:void(0);" class="element delements c8 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Iron_electrolytic_and_1cm3_cube.jpg/640px-Iron_electrolytic_and_1cm3_cube.jpg')">
+        <a id="Fe" href="javascript:void(0);" class="element delements c8 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Iron_electrolytic_and_1cm3_cube.jpg/640px-Iron_electrolytic_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">26</div>
             <div class="label">
@@ -936,7 +950,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c8 r5 clickable-cell" onclick="showPopup('https://www.chapelle.co.uk/Admin/Images/Editor/Blog/Chapelle/2013/Ruthenium%20in%20Jewellery/Ruthenium%20in%20Jewellery.jpg')">
+        <a id="Ru" href="javascript:void(0);" class="element delements c8 r5 clickable-cell" onclick="showPopup('https://www.chapelle.co.uk/Admin/Images/Editor/Blog/Chapelle/2013/Ruthenium%20in%20Jewellery/Ruthenium%20in%20Jewellery.jpg')">
           <div class="square">
             <div class="atomic-number">44</div>
             <div class="label">
@@ -953,7 +967,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c8 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Osmium_cluster.jpg/220px-Osmium_cluster.jpg');">
+        <a id="Os" href="javascript:void(0);" class="element delements c8 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Osmium_cluster.jpg/220px-Osmium_cluster.jpg');">
           <div class="square">
             <div class="atomic-number">76</div>
             <div class="label">
@@ -971,7 +985,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c8 r7 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/03/Hassium.jpg');">
+        <a id="Hs" href="javascript:void(0);" class="element delements c8 r7 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/03/Hassium.jpg');">
           <div class="square">
             <div class="atomic-number">108</div>
             <div class="label">
@@ -993,7 +1007,7 @@
         
 
         <!--9 colonna-->
-        <a href="javascript:void(0);" class="element delements c9 r4 clickable-cell" onclick="showPopup('https://www.nationaldefensemagazine.org/-/media/sites/magazine/2022/08/kobalt_electrolytic_and_1cm3_cube.jpg')">
+        <a id="Co" href="javascript:void(0);" class="element delements c9 r4 clickable-cell" onclick="showPopup('https://www.nationaldefensemagazine.org/-/media/sites/magazine/2022/08/kobalt_electrolytic_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">27</div>
             <div class="label">
@@ -1009,7 +1023,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c9 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/98/Rhodium_powder_pressed_melted.jpg')">
+        <a id="Rh" href="javascript:void(0);" class="element delements c9 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/98/Rhodium_powder_pressed_melted.jpg')">
           <div class="square">
             <div class="atomic-number">45</div>
             <div class="label">
@@ -1026,7 +1040,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c9 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/a/a8/Iridium-2.jpg');">
+        <a id="Ir" href="javascript:void(0);" class="element delements c9 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/a/a8/Iridium-2.jpg');">
           <div class="square">
             <div class="atomic-number">77</div>
             <div class="label">
@@ -1044,7 +1058,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c9 r7 clickable-cell" onclick="showPopup('https://4.bp.blogspot.com/-A50yMId9oDA/VhNCtU6sNhI/AAAAAAAAamA/rH9Aos9NCZw/s1600/not%2BMeitnerium.jpg');">
+        <a id="Mt" href="javascript:void(0);" class="element delements c9 r7 clickable-cell" onclick="showPopup('https://4.bp.blogspot.com/-A50yMId9oDA/VhNCtU6sNhI/AAAAAAAAamA/rH9Aos9NCZw/s1600/not%2BMeitnerium.jpg');">
           <div class="square">
             <div class="atomic-number">109</div>
             <div class="label">
@@ -1066,7 +1080,7 @@
         
 
         <!--10 colonna-->
-        <a href="javascript:void(0);" class="element delements c10 r4 clickable-cell" onclick="showPopup('https://images.prismic.io/xometry-marketing/525a8ef9-1bd1-47fa-a58a-7a607ac75456_nickel.jpg?auto=compress%2Cformat&rect=143%2C0%2C714%2C714&w=486&h=486&fit=max')">
+        <a id="Ni" href="javascript:void(0);" class="element delements c10 r4 clickable-cell" onclick="showPopup('https://images.prismic.io/xometry-marketing/525a8ef9-1bd1-47fa-a58a-7a607ac75456_nickel.jpg?auto=compress%2Cformat&rect=143%2C0%2C714%2C714&w=486&h=486&fit=max')">
           <div class="square">
             <div class="atomic-number">28</div>
             <div class="label">
@@ -1082,7 +1096,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c10 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d7/Palladium_%2846_Pd%29.jpg')">
+        <a id="Pd" href="javascript:void(0);" class="element delements c10 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d7/Palladium_%2846_Pd%29.jpg')">
           <div class="square">
             <div class="atomic-number">46</div>
             <div class="label">
@@ -1098,7 +1112,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c10 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg');">
+        <a id="Pt" href="javascript:void(0);" class="element delements c10 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg');">
           <div class="square">
             <div class="atomic-number">78</div>
             <div class="label">
@@ -1116,7 +1130,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c10 r7 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpuqLdC8RKgbWY3X37nY_k4_dCBFDpr0IZQjUvGoPWxEY9hpwkKZsz5GmlYR53j47mudQ&usqp=CAU');">
+        <a id="Ds" href="javascript:void(0);" class="element delements c10 r7 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpuqLdC8RKgbWY3X37nY_k4_dCBFDpr0IZQjUvGoPWxEY9hpwkKZsz5GmlYR53j47mudQ&usqp=CAU');">
           <div class="square">
             <div class="atomic-number">110</div>
             <div class="label">
@@ -1138,7 +1152,7 @@
         
 
         <!--11 colonna-->
-        <a href="javascript:void(0);" class="element delements c11 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NatCopper.jpg/1200px-NatCopper.jpg')">
+        <a id="Cu" href="javascript:void(0);" class="element delements c11 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/NatCopper.jpg/1200px-NatCopper.jpg')">
           <div class="square">
             <div class="atomic-number">29</div>
             <div class="label">
@@ -1154,7 +1168,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c11 r5 clickable-cell" onclick="showPopup('https://geologyscience.com/wp-content/uploads/2019/06/Silver.png')">
+        <a id="Ag" href="javascript:void(0);" class="element delements c11 r5 clickable-cell" onclick="showPopup('https://geologyscience.com/wp-content/uploads/2019/06/Silver.png')">
           <div class="square">
             <div class="atomic-number">47</div>
             <div class="label">
@@ -1171,7 +1185,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c11 r6 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/QjFYmqeC_tsWT2bsXHP0WC8gwrA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/closeup-of-big-gold-nugget-511603038-5ad92a97fa6bcc00362b919b.jpg');">
+        <a id="Au" href="javascript:void(0);" class="element delements c11 r6 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/QjFYmqeC_tsWT2bsXHP0WC8gwrA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/closeup-of-big-gold-nugget-511603038-5ad92a97fa6bcc00362b919b.jpg');">
           <div class="square">
             <div class="atomic-number">79</div>
             <div class="label">
@@ -1189,7 +1203,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c11 r7 clickable-cell" onclick="showPopup('https://preview.redd.it/oogroqg9g9d61.jpg?auto=webp&s=6f8054b7b4ab552a93d694694c94557056e6a70e');">
+        <a id="Rg" href="javascript:void(0);" class="element delements c11 r7 clickable-cell" onclick="showPopup('https://preview.redd.it/oogroqg9g9d61.jpg?auto=webp&s=6f8054b7b4ab552a93d694694c94557056e6a70e');">
           <div class="square">
             <div class="atomic-number">111</div>
             <div class="label">
@@ -1211,7 +1225,7 @@
         
 
         <!--12 colonna-->
-        <a href="javascript:void(0);" class="element delements c12 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/f/f9/Zinc_fragment_sublimed_and_1cm3_cube.jpg')">
+        <a id="Zn" href="javascript:void(0);" class="element delements c12 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/f/f9/Zinc_fragment_sublimed_and_1cm3_cube.jpg')">
           <div class="square">
             <div class="atomic-number">30</div>
             <div class="label">
@@ -1227,7 +1241,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c12 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/b5/Cadmium-crystal_bar.jpg')">
+        <a id="Cd" href="javascript:void(0);" class="element delements c12 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/b5/Cadmium-crystal_bar.jpg')">
           <div class="square">
             <div class="atomic-number">48</div>
             <div class="label">
@@ -1244,7 +1258,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c12 r6 clickable-cell" onclick="showPopup('https://cdn.britannica.com/91/150291-050-675525C7/mercury-beads-glass-container.jpg');">
+        <a id="Hg" href="javascript:void(0);" class="element delements c12 r6 clickable-cell" onclick="showPopup('https://cdn.britannica.com/91/150291-050-675525C7/mercury-beads-glass-container.jpg');">
           <div class="square">
             <div class="atomic-number">80</div>
             <div class="label">
@@ -1262,7 +1276,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c12 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Sphalerite4.jpg/170px-Sphalerite4.jpg');">
+        <a id="Cn" href="javascript:void(0);" class="element delements c12 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Sphalerite4.jpg/170px-Sphalerite4.jpg');">
           <div class="square">
             <div class="atomic-number">112</div>
             <div class="label">
@@ -1284,7 +1298,7 @@
         
 
         <!--13 colonna-->
-        <a href="javascript:void(0);" class="element pelements c13 r2 clickable-cell" onclick="showPopup('https://www.clinicaladvisor.com/wp-content/uploads/sites/11/2018/12/0817altmedsboron_1268589-860x573.jpg')">
+        <a id="B" href="javascript:void(0);" class="element pelements c13 r2 clickable-cell" onclick="showPopup('https://www.clinicaladvisor.com/wp-content/uploads/sites/11/2018/12/0817altmedsboron_1268589-860x573.jpg')">
           <div class="square">
             <div class="atomic-number">5</div>
             <div class="label">
@@ -1298,7 +1312,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c13 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Aluminium-4.jpg/640px-Aluminium-4.jpg')">
+        <a id="Al" href="javascript:void(0);" class="element pelements c13 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Aluminium-4.jpg/640px-Aluminium-4.jpg')">
           <div class="square">
             <div class="atomic-number">13</div>
             <div class="label">
@@ -1313,7 +1327,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c13 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Gallium_crystals.jpg/800px-Gallium_crystals.jpg')">
+        <a id="Ga" href="javascript:void(0);" class="element pelements c13 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Gallium_crystals.jpg/800px-Gallium_crystals.jpg')">
           <div class="square">
             <div class="atomic-number">31</div>
             <div class="label">
@@ -1329,7 +1343,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c13 r5 clickable-cell" onclick="showPopup('https://cdn.mos.cms.futurecdn.net/EmE4MmqR4GzYfF3MhzotFm-1200-80.jpg')">
+        <a id="In" href="javascript:void(0);" class="element pelements c13 r5 clickable-cell" onclick="showPopup('https://cdn.mos.cms.futurecdn.net/EmE4MmqR4GzYfF3MhzotFm-1200-80.jpg')">
           <div class="square">
             <div class="atomic-number">49</div>
             <div class="label">
@@ -1346,7 +1360,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c13 r6 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/05/Thallium.jpeg');">
+        <a id="Tl" href="javascript:void(0);" class="element pelements c13 r6 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/05/Thallium.jpeg');">
           <div class="square">
             <div class="atomic-number">81</div>
             <div class="label">
@@ -1364,7 +1378,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c13 r7 clickable-cell" onclick="showPopup('https://study.com/cimages/multimages/16/360px-nihonium_shells.svg8971291457619994040.png');">
+        <a id="Nh" href="javascript:void(0);" class="element pelements c13 r7 clickable-cell" onclick="showPopup('https://study.com/cimages/multimages/16/360px-nihonium_shells.svg8971291457619994040.png');">
           <div class="square">
             <div class="atomic-number">113</div>
             <div class="label">
@@ -1386,7 +1400,7 @@
         
 
         <!--14 colonna-->
-        <a href="javascript:void(0);" class="element pelements c14 r2 clickable-cell" onclick="showPopup('https://static.dezeen.com/uploads/2021/06/Dezeen-guide-to-carbon_01-hero-852x479.jpg')">
+        <a id="C" href="javascript:void(0);" class="element pelements c14 r2 clickable-cell" onclick="showPopup('https://static.dezeen.com/uploads/2021/06/Dezeen-guide-to-carbon_01-hero-852x479.jpg')">
           <div class="square">
             <div class="atomic-number">6</div>
             <div class="label">
@@ -1400,7 +1414,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c14 r3 clickable-cell" onclick="showPopup('https://www.mindat.org/imagecache/c5/34/07125740016845740488680.jpg')">
+        <a id="Si" href="javascript:void(0);" class="element pelements c14 r3 clickable-cell" onclick="showPopup('https://www.mindat.org/imagecache/c5/34/07125740016845740488680.jpg')">
           <div class="square">
             <div class="atomic-number">14</div>
             <div class="label">
@@ -1415,7 +1429,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c14 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/08/Polycrystalline-germanium.jpg')">
+        <a id="Ge" href="javascript:void(0);" class="element pelements c14 r4 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/08/Polycrystalline-germanium.jpg')">
           <div class="square">
             <div class="atomic-number">32</div>
             <div class="label">
@@ -1431,7 +1445,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c14 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Cassiterite09.jpg/220px-Cassiterite09.jpg')">
+        <a id="Sn" href="javascript:void(0);" class="element pelements c14 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Cassiterite09.jpg/220px-Cassiterite09.jpg')">
           <div class="square">
             <div class="atomic-number">50</div>
             <div class="label">
@@ -1448,7 +1462,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c14 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lead_electrolytic_and_1cm3_cube.jpg/1200px-Lead_electrolytic_and_1cm3_cube.jpg');">
+        <a id="Pb" href="javascript:void(0);" class="element pelements c14 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lead_electrolytic_and_1cm3_cube.jpg/1200px-Lead_electrolytic_and_1cm3_cube.jpg');">
           <div class="square">
             <div class="atomic-number">82</div>
             <div class="label">
@@ -1466,7 +1480,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c14 r7 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX0PPS3o51fx61uicMUWRH88mI1t8xElh-22bL8FZWZXMgIVdU00xq8BwG2Ol1VG5YQLA&usqp=CAU');">
+        <a id="Fl" href="javascript:void(0);" class="element pelements c14 r7 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX0PPS3o51fx61uicMUWRH88mI1t8xElh-22bL8FZWZXMgIVdU00xq8BwG2Ol1VG5YQLA&usqp=CAU');">
           <div class="square">
             <div class="atomic-number">114</div>
             <div class="label">
@@ -1488,7 +1502,7 @@
         
 
         <!--15 colonna-->
-        <a href="javascript:void(0);" class="element pelements c15 r2 clickable-cell" onclick="showPopup('https://www.nexair.com/wp-content/uploads/2022/08/What-are-the-4-major-uses-of-nitrogen_.jpg')">
+        <a id="N" href="javascript:void(0);" class="element pelements c15 r2 clickable-cell" onclick="showPopup('https://www.nexair.com/wp-content/uploads/2022/08/What-are-the-4-major-uses-of-nitrogen_.jpg')">
           <div class="square">
             <div class="atomic-number">7</div>
             <div class="label">
@@ -1502,7 +1516,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c15 r3 clickable-cell" onclick="showPopup('https://m.media-amazon.com/images/I/61B2TT8l6BL._AC_UF1000,1000_QL80_.jpg')">
+        <a id="P" href="javascript:void(0);" class="element pelements c15 r3 clickable-cell" onclick="showPopup('https://m.media-amazon.com/images/I/61B2TT8l6BL._AC_UF1000,1000_QL80_.jpg')">
           <div class="square">
             <div class="atomic-number">15</div>
             <div class="label">
@@ -1517,7 +1531,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c15 r4 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/mQ4LX8-0x65-Zb-LYI_V0fcYsjw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-184957763-25bd535075fa4891bbd52a57a1e6cb0c.jpg')">
+        <a id="As" href="javascript:void(0);" class="element pelements c15 r4 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/mQ4LX8-0x65-Zb-LYI_V0fcYsjw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-184957763-25bd535075fa4891bbd52a57a1e6cb0c.jpg')">
           <div class="square">
             <div class="atomic-number">33</div>
             <div class="label">
@@ -1533,7 +1547,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c15 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/5/5c/Antimony-4.jpg')">
+        <a id="Sb" href="javascript:void(0);" class="element pelements c15 r5 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/5/5c/Antimony-4.jpg')">
           <div class="square">
             <div class="atomic-number">51</div>
             <div class="label">
@@ -1550,7 +1564,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c15 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bismuth_crystals_and_1cm3_cube.jpg/1200px-Bismuth_crystals_and_1cm3_cube.jpg');">
+        <a id="Bi" href="javascript:void(0);" class="element pelements c15 r6 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Bismuth_crystals_and_1cm3_cube.jpg/1200px-Bismuth_crystals_and_1cm3_cube.jpg');">
           <div class="square">
             <div class="atomic-number">83</div>
             <div class="label">
@@ -1568,7 +1582,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c15 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d2/Electron_shell_115_Moscovium.svg');">
+        <a id="Mc" href="javascript:void(0);" class="element pelements c15 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d2/Electron_shell_115_Moscovium.svg');">
           <div class="square">
             <div class="atomic-number">115</div>
             <div class="label">
@@ -1590,7 +1604,7 @@
         
 
         <!--16 colonna-->
-        <a href="javascript:void(0);" class="element pelements c16 r2 clickable-cell" onclick="showPopup('https://science4fun.info/wp-content/uploads/2017/08/oxygen-atom.jpg')">
+        <a id="O" href="javascript:void(0);" class="element pelements c16 r2 clickable-cell" onclick="showPopup('https://science4fun.info/wp-content/uploads/2017/08/oxygen-atom.jpg')">
           <div class="square">
             <div class="atomic-number">8</div>
             <div class="label">
@@ -1604,7 +1618,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c16 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg/640px-Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg')">
+        <a id="S" href="javascript:void(0);" class="element pelements c16 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg/640px-Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg')">
           <div class="square">
             <div class="atomic-number">16</div>
             <div class="label">
@@ -1619,7 +1633,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c16 r4 clickable-cell" onclick="showPopup('https://www.caracteristicass.de/wp-content/uploads/2020/03/caracteristicas-del-selenio.jpg')">
+        <a id="Se" href="javascript:void(0);" class="element pelements c16 r4 clickable-cell" onclick="showPopup('https://www.caracteristicass.de/wp-content/uploads/2020/03/caracteristicas-del-selenio.jpg')">
           <div class="square">
           <div class="atomic-number">34</div>
           <div class="label">
@@ -1635,7 +1649,7 @@
           </ul>
         </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c16 r5 clickable-cell" onclick="showPopup('https://d2cbg94ubxgsnp.cloudfront.net/Pictures/480xany/4/0/2/143402_shutterstock_790341754_485480.jpg')">
+        <a id="Te" href="javascript:void(0);" class="element pelements c16 r5 clickable-cell" onclick="showPopup('https://d2cbg94ubxgsnp.cloudfront.net/Pictures/480xany/4/0/2/143402_shutterstock_790341754_485480.jpg')">
           <div class="square">
             <div class="atomic-number">52</div>
             <div class="label">
@@ -1652,7 +1666,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c16 r6 clickable-cell" onclick="showPopup('https://theodoregray.com/periodictable/Samples/084.5/s13s.JPG');">
+        <a id="Po" href="javascript:void(0);" class="element pelements c16 r6 clickable-cell" onclick="showPopup('https://theodoregray.com/periodictable/Samples/084.5/s13s.JPG');">
           <div class="square">
             <div class="atomic-number">84</div>
             <div class="label">
@@ -1670,7 +1684,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c16 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Electron_shell_116_Livermorium.svg/1200px-Electron_shell_116_Livermorium.svg.png');">
+        <a id="Lv" href="javascript:void(0);" class="element pelements c16 r7 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Electron_shell_116_Livermorium.svg/1200px-Electron_shell_116_Livermorium.svg.png');">
           <div class="square">
             <div class="atomic-number">116</div>
             <div class="label">
@@ -1692,7 +1706,7 @@
         
 
         <!--17 colonna-->
-        <a href="javascript:void(0);" class="element pelements c17 r2 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/4zYbLgfshv9n1n4nMueNC1Aw9eU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fluorinesimulant-56a12c323df78cf772681c61.jpg')">
+        <a id="F" href="javascript:void(0);" class="element pelements c17 r2 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/4zYbLgfshv9n1n4nMueNC1Aw9eU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fluorinesimulant-56a12c323df78cf772681c61.jpg')">
           <div class="square">
             <div class="atomic-number">9</div>
             <div class="label">
@@ -1706,7 +1720,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c17 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Chlorine_dioxide_gas_and_solution.jpg/220px-Chlorine_dioxide_gas_and_solution.jpg')">
+        <a id="Cl" href="javascript:void(0);" class="element pelements c17 r3 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Chlorine_dioxide_gas_and_solution.jpg/220px-Chlorine_dioxide_gas_and_solution.jpg')">
           <div class="square">
             <div class="atomic-number">17</div>
             <div class="label">
@@ -1721,7 +1735,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c17 r4 clickable-cell" onclick="showPopup('https://cdn.mos.cms.futurecdn.net/S6SNpRNQFXaMCyyYttoQcc-1200-80.jpg')">
+        <a id="Br" href="javascript:void(0);" class="element pelements c17 r4 clickable-cell" onclick="showPopup('https://cdn.mos.cms.futurecdn.net/S6SNpRNQFXaMCyyYttoQcc-1200-80.jpg')">
           <div class="square">
           <div class="atomic-number">35</div>
           <div class="label">
@@ -1737,7 +1751,7 @@
           </ul>
         </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c17 r5 clickable-cell" onclick="showPopup('https://cdn.britannica.com/68/132468-050-9DE736C3/Iodine.jpg')">
+        <a id="I" href="javascript:void(0);" class="element pelements c17 r5 clickable-cell" onclick="showPopup('https://cdn.britannica.com/68/132468-050-9DE736C3/Iodine.jpg')">
           <div class="square">
             <div class="atomic-number">53</div>
             <div class="label">
@@ -1754,7 +1768,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c17 r6 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/03/Astatine.jpg');">
+        <a id="At" href="javascript:void(0);" class="element pelements c17 r6 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/03/Astatine.jpg');">
           <div class="square">
             <div class="atomic-number">85</div>
             <div class="label">
@@ -1772,7 +1786,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c17 r7 clickable-cell" onclick="showPopup('https://study.com/cimages/multimages/16/tennessine_shells.svg1623366227564501870.png');">
+        <a id="Ts" href="javascript:void(0);" class="element pelements c17 r7 clickable-cell" onclick="showPopup('https://study.com/cimages/multimages/16/tennessine_shells.svg1623366227564501870.png');">
           <div class="square">
             <div class="atomic-number">117</div>
             <div class="label">
@@ -1794,7 +1808,7 @@
 
 
         <!--18 colonna-->
-        <a href="javascript:void(0);" class="element selements c18 r1 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQtcV1_17QJ_8kz2Qkid0m1SCD3jh0v5g-Kg&usqp=CAU');">
+        <a id="He" href="javascript:void(0);" class="element selements c18 r1 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQtcV1_17QJ_8kz2Qkid0m1SCD3jh0v5g-Kg&usqp=CAU');">
           <div class="square">
             <div class="atomic-number">2</div>
             <div class="label">
@@ -1807,7 +1821,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c18 r2 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2019/01/Neon.jpg?fit=225%2C225&ssl=1')">
+        <a id="Ne" href="javascript:void(0);" class="element pelements c18 r2 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2019/01/Neon.jpg?fit=225%2C225&ssl=1')">
           <div class="square">
             <div class="atomic-number">10</div>
             <div class="label">
@@ -1821,7 +1835,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c18 r3 clickable-cell" onclick="showPopup('https://images-of-elements.com/argon.jpg')">
+        <a id="Ar" href="javascript:void(0);" class="element pelements c18 r3 clickable-cell" onclick="showPopup('https://images-of-elements.com/argon.jpg')">
           <div class="square">
             <div class="atomic-number">18</div>
             <div class="label">
@@ -1836,7 +1850,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c18 r4 clickable-cell" onclick="showPopup('https://www.smart-elements.com/Angebote/Kr_neu800x600.jpg')">
+        <a id="Kr" href="javascript:void(0);" class="element pelements c18 r4 clickable-cell" onclick="showPopup('https://www.smart-elements.com/Angebote/Kr_neu800x600.jpg')">
           <div class="square">
             <div class="atomic-number">36</div>
             <div class="label">
@@ -1852,7 +1866,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c18 r5 clickable-cell" onclick="showPopup('https://chemistrytalk.org/wp-content/uploads/2023/03/xenon-lamp.jpg')">
+        <a id="Xe" href="javascript:void(0);" class="element pelements c18 r5 clickable-cell" onclick="showPopup('https://chemistrytalk.org/wp-content/uploads/2023/03/xenon-lamp.jpg')">
           <div class="square">
             <div class="atomic-number">54</div>
             <div class="label">
@@ -1869,7 +1883,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c18 r6 clickable-cell" onclick="showPopup('https://www.purewaterproducts.com/img/radon_306.jpg');">
+        <a id="Rn" href="javascript:void(0);" class="element pelements c18 r6 clickable-cell" onclick="showPopup('https://www.purewaterproducts.com/img/radon_306.jpg');">
           <div class="square">
             <div class="atomic-number">86</div>
             <div class="label">
@@ -1887,7 +1901,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element pelements c18 r7 clickable-cell" onclick="showPopup('https://www.ccdc.cam.ac.uk/media/elements/Oganesson/Oganesson.png');">
+        <a id="Og" href="javascript:void(0);" class="element pelements c18 r7 clickable-cell" onclick="showPopup('https://www.ccdc.cam.ac.uk/media/elements/Oganesson/Oganesson.png');">
           <div class="square">
             <div class="atomic-number">118</div>
             <div class="label">
@@ -1911,7 +1925,7 @@
         <!-- LANTANOĪDI UN AKTINOĪDI-->
 
         <!--1 kolonna-->
-        <a href="javascript:void(0);" class="element delements c2 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/8/8c/Lanthanum-2.jpg')">
+        <a id="La" href="javascript:void(0);" class="element delements c2 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/8/8c/Lanthanum-2.jpg')">
           <div class="square">
             <div class="atomic-number">57</div>
             <div class="label">
@@ -1929,7 +1943,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element delements c2 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Uraninite-39029.jpg/150px-Uraninite-39029.jpg');">
+        <a id="Ac" href="javascript:void(0);" class="element delements c2 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Uraninite-39029.jpg/150px-Uraninite-39029.jpg');">
           <div class="square">
             <div class="atomic-number">89</div>
             <div class="label">
@@ -1951,7 +1965,7 @@
 
 
         <!--2 kolonna-->
-        <a href="javascript:void(0);" class="element felements c3 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cerium2.jpg/640px-Cerium2.jpg')">
+        <a id="Ce" href="javascript:void(0);" class="element felements c3 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cerium2.jpg/640px-Cerium2.jpg')">
           <div class="square">
             <div class="atomic-number">58</div>
             <div class="label">
@@ -1969,7 +1983,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c3 r10 clickable-cell" onclick="showPopup('https://www.cancer.gov/sites/g/files/xnrzdm211/files/styles/cgov_article/public/cgov_image/media_image/800/800/files/thorium.jpg?h=4965b7f7&itok=2-Nn8PVg');">
+        <a id="Th" href="javascript:void(0);" class="element felements c3 r10 clickable-cell" onclick="showPopup('https://www.cancer.gov/sites/g/files/xnrzdm211/files/styles/cgov_article/public/cgov_image/media_image/800/800/files/thorium.jpg?h=4965b7f7&itok=2-Nn8PVg');">
           <div class="square">
             <div class="atomic-number">90</div>
             <div class="label">
@@ -1991,7 +2005,7 @@
 
 
         <!--3 kolonna-->
-        <a href="javascript:void(0);" class="element felements c4 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/c/c7/Praseodymium.jpg')">
+        <a id="Pr" href="javascript:void(0);" class="element felements c4 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/c/c7/Praseodymium.jpg')">
           <div class="square">
             <div class="atomic-number">59</div>
             <div class="label">
@@ -2009,7 +2023,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c4 r10 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/04/Protactinium.jpg');">
+        <a id="Pa" href="javascript:void(0);" class="element felements c4 r10 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/04/Protactinium.jpg');">
           <div class="square">
             <div class="atomic-number">91</div>
             <div class="label">
@@ -2031,7 +2045,7 @@
 
 
         <!--4 kolonna-->
-        <a href="javascript:void(0);" class="element felements c5 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/ba/Neodymium2.jpg')">
+        <a id="Nd" href="javascript:void(0);" class="element felements c5 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/b/ba/Neodymium2.jpg')">
           <div class="square">
             <div class="atomic-number">60</div>
             <div class="label">
@@ -2049,7 +2063,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c5 r10 clickable-cell" onclick="showPopup('https://images-of-elements.com/s/uranium.jpg');">
+        <a id="U" href="javascript:void(0);" class="element felements c5 r10 clickable-cell" onclick="showPopup('https://images-of-elements.com/s/uranium.jpg');">
           <div class="square">
             <div class="atomic-number">92</div>
             <div class="label">
@@ -2071,7 +2085,7 @@
 
         
         <!--5 kolonna-->
-        <a href="javascript:void(0);" class="element felements c6 r9 clickable-cell" onclick="showPopup('https://static.wikia.nocookie.net/neventale/images/5/5b/Promethium.jpg/revision/latest?cb=20130507210743');">
+        <a id="Pm" href="javascript:void(0);" class="element felements c6 r9 clickable-cell" onclick="showPopup('https://static.wikia.nocookie.net/neventale/images/5/5b/Promethium.jpg/revision/latest?cb=20130507210743');">
           <div class="square">
             <div class="atomic-number">61</div>
             <div class="label">
@@ -2089,7 +2103,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c6 r10 clickable-cell" onclick="showPopup('https://periodictable.com/Samples/Aeschynite/s6s.JPG');">
+        <a id="Np" href="javascript:void(0);" class="element felements c6 r10 clickable-cell" onclick="showPopup('https://periodictable.com/Samples/Aeschynite/s6s.JPG');">
           <div class="square">
             <div class="atomic-number">93</div>
             <div class="label">
@@ -2111,7 +2125,7 @@
 
 
         <!--6 kolonna-->
-        <a href="javascript:void(0);" class="element felements c7 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/8/88/Samarium-2.jpg');">
+        <a id="Sm" href="javascript:void(0);" class="element felements c7 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/8/88/Samarium-2.jpg');">
           <div class="square">
             <div class="atomic-number">62</div>
             <div class="label">
@@ -2129,7 +2143,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c7 r10 clickable-cell" onclick="showPopup('https://i.pinimg.com/736x/80/09/d9/8009d933021a8a8b6f93028e38d55475.jpg');">
+        <a id="Pu" href="javascript:void(0);" class="element felements c7 r10 clickable-cell" onclick="showPopup('https://i.pinimg.com/736x/80/09/d9/8009d933021a8a8b6f93028e38d55475.jpg');">
           <div class="square">
             <div class="atomic-number">94</div>
             <div class="label">
@@ -2151,7 +2165,7 @@
 
 
         <!--7 kolonna-->
-        <a href="javascript:void(0);" class="element felements c8 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Europium.jpg/640px-Europium.jpg');">
+        <a id="Eu" href="javascript:void(0);" class="element felements c8 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Europium.jpg/640px-Europium.jpg');">
           <div class="square">
             <div class="atomic-number">63</div>
             <div class="label">
@@ -2169,7 +2183,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c8 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/e/ee/Americium_microscope.jpg');">
+        <a id="Am" href="javascript:void(0);" class="element felements c8 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/e/ee/Americium_microscope.jpg');">
           <div class="square">
             <div class="atomic-number">95</div>
             <div class="label">
@@ -2191,7 +2205,7 @@
 
 
         <!--8 kolonna-->
-        <a href="javascript:void(0);" class="element felements c9 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d1/Gadolinium-4.jpg');">
+        <a id="Gd" href="javascript:void(0);" class="element felements c9 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/d/d1/Gadolinium-4.jpg');">
           <div class="square">
             <div class="atomic-number">64</div>
             <div class="label">
@@ -2209,7 +2223,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c9 r10 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2019/01/Curium.jpg?fit=225%2C225&ssl=1');">
+        <a id="Cm" href="javascript:void(0);" class="element felements c9 r10 clickable-cell" onclick="showPopup('https://i0.wp.com/periodic-table.com/wp-content/uploads/2019/01/Curium.jpg?fit=225%2C225&ssl=1');">
           <div class="square">
             <div class="atomic-number">96</div>
             <div class="label">
@@ -2231,7 +2245,7 @@
 
 
         <!--9 kolonna-->
-        <a href="javascript:void(0);" class="element felements c10 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/9a/Terbium-2.jpg');">
+        <a id="Tb" href="javascript:void(0);" class="element felements c10 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/9/9a/Terbium-2.jpg');">
           <div class="square">
             <div class="atomic-number">65</div>
             <div class="label">
@@ -2249,7 +2263,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c10 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Berkelium_metal.jpg/220px-Berkelium_metal.jpg');">
+        <a id="Bk" href="javascript:void(0);" class="element felements c10 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Berkelium_metal.jpg/220px-Berkelium_metal.jpg');">
           <div class="square">
             <div class="atomic-number">97</div>
             <div class="label">
@@ -2271,7 +2285,7 @@
 
 
         <!--10 kolonna-->
-        <a href="javascript:void(0);" class="element felements c11 r9 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/2uVS3jDL5aFJvcokmXEKBvUlvc8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Dy-Metal-2-56a613dd5f9b58b7d0dfcc4a.jpg');">
+        <a id="Dy" href="javascript:void(0);" class="element felements c11 r9 clickable-cell" onclick="showPopup('https://www.thoughtco.com/thmb/2uVS3jDL5aFJvcokmXEKBvUlvc8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Dy-Metal-2-56a613dd5f9b58b7d0dfcc4a.jpg');">
           <div class="square">
             <div class="atomic-number">66</div>
             <div class="label">
@@ -2289,7 +2303,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c11 r10 clickable-cell" onclick="showPopup('https://www.ccdc.cam.ac.uk/media/elements/Californium.jpg');">
+        <a id="Cf" href="javascript:void(0);" class="element felements c11 r10 clickable-cell" onclick="showPopup('https://www.ccdc.cam.ac.uk/media/elements/Californium.jpg');">
           <div class="square">
             <div class="atomic-number">98</div>
             <div class="label">
@@ -2311,7 +2325,7 @@
 
 
         <!--11 kolonna-->
-        <a href="javascript:void(0);" class="element felements c12 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/0a/Holmium2.jpg');">
+        <a id="Ho" href="javascript:void(0);" class="element felements c12 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/0/0a/Holmium2.jpg');">
           <div class="square">
             <div class="atomic-number">67</div>
             <div class="label">
@@ -2329,7 +2343,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c12 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/5/55/Einsteinium.jpg');">
+        <a id="Es" href="javascript:void(0);" class="element felements c12 r10 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/5/55/Einsteinium.jpg');">
           <div class="square">
             <div class="atomic-number">99</div>
             <div class="label">
@@ -2351,7 +2365,7 @@
 
 
         <!--12 kolonna-->
-        <a href="javascript:void(0);" class="element felements c13 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/12/Erbium-crop.jpg');">
+        <a id="Er" href="javascript:void(0);" class="element felements c13 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/12/Erbium-crop.jpg');">
           <div class="square">
             <div class="atomic-number">68</div>
             <div class="label">
@@ -2369,7 +2383,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c13 r10 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcipT4LD7yyVQ6fN44Y9qgFdXhgtHUg7wOYv76OqVAeRjXwCW-lq7QjufIcE2P9FxMCvE&usqp=CAU');">
+        <a id="Fm" href="javascript:void(0);" class="element felements c13 r10 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcipT4LD7yyVQ6fN44Y9qgFdXhgtHUg7wOYv76OqVAeRjXwCW-lq7QjufIcE2P9FxMCvE&usqp=CAU');">
           <div class="square">
             <div class="atomic-number">100</div>
             <div class="label">
@@ -2391,7 +2405,7 @@
 
 
         <!--13 kolonna-->
-        <a href="javascript:void(0);" class="element felements c14 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/1e/Thulium_sublimed_dendritic_and_1cm3_cube.jpg');">
+        <a id="Tm" href="javascript:void(0);" class="element felements c14 r9 clickable-cell" onclick="showPopup('https://upload.wikimedia.org/wikipedia/commons/1/1e/Thulium_sublimed_dendritic_and_1cm3_cube.jpg');">
           <div class="square">
             <div class="atomic-number">69</div>
             <div class="label">
@@ -2409,7 +2423,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c14 r10 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcipT4LD7yyVQ6fN44Y9qgFdXhgtHUg7wOYv76OqVAeRjXwCW-lq7QjufIcE2P9FxMCvE&usqp=CAU');">
+        <a id="Md" href="javascript:void(0);" class="element felements c14 r10 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcipT4LD7yyVQ6fN44Y9qgFdXhgtHUg7wOYv76OqVAeRjXwCW-lq7QjufIcE2P9FxMCvE&usqp=CAU');">
           <div class="square">
             <div class="atomic-number">101</div>
             <div class="label">
@@ -2431,7 +2445,7 @@
 
 
         <!--14 kolonna-->
-        <a href="javascript:void(0);" class="element felements c15 r9 clickable-cell" onclick="showPopup('https://www.mindat.org/imagecache/89/b1/08315760014961428758196.jpg');">
+        <a id="Yb" href="javascript:void(0);" class="element felements c15 r9 clickable-cell" onclick="showPopup('https://www.mindat.org/imagecache/89/b1/08315760014961428758196.jpg');">
           <div class="square">
             <div class="atomic-number">70</div>
             <div class="label">
@@ -2449,7 +2463,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c15 r10 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLCBRqqKaFpLI1070ePw7ZYVgbrss_VpZVm5rvMGkkK5kSS_P4tGK2oNcz72jc2UAylNU&usqp=CAU');">
+        <a id="No" href="javascript:void(0);" class="element felements c15 r10 clickable-cell" onclick="showPopup('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLCBRqqKaFpLI1070ePw7ZYVgbrss_VpZVm5rvMGkkK5kSS_P4tGK2oNcz72jc2UAylNU&usqp=CAU');">
           <div class="square">
             <div class="atomic-number">102</div>
             <div class="label">
@@ -2471,7 +2485,7 @@
 
 
         <!--15 kolonna-->
-        <a href="javascript:void(0);" class="element felements c16 r9 clickable-cell" onclick="showPopup('https://sciencenotes.org/wp-content/uploads/2017/09/lutetium.jpg');">
+        <a id="Lu" href="javascript:void(0);" class="element felements c16 r9 clickable-cell" onclick="showPopup('https://sciencenotes.org/wp-content/uploads/2017/09/lutetium.jpg');">
           <div class="square">
             <div class="atomic-number">71</div>
             <div class="label">
@@ -2489,7 +2503,7 @@
             </ul>
           </div>
         </a>
-        <a href="javascript:void(0);" class="element felements c16 r10 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/03/Lawrencium.jpg');">
+        <a id="Lr" href="javascript:void(0);" class="element felements c16 r10 clickable-cell" onclick="showPopup('https://www.chemistrylearner.com/wp-content/uploads/2018/03/Lawrencium.jpg');">
           <div class="square">
             <div class="atomic-number">103</div>
             <div class="label">
@@ -2742,7 +2756,7 @@
         
 
         <!--year interval-->
-        <div class="r12" onclick="minusOne()" style="color: rgb(255, 255, 255); grid-column: 7 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+        <div onclick="minusOne()" class="r12" style="color: rgb(255, 255, 255); grid-column: 7 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
           <div class="element1" style="height: 55px; width: 100%;">
             <div class="square">
              <p style="margin: 0;">iepriekšējie desmit gadi</p> 
@@ -2756,7 +2770,7 @@
             </div>
           </div>
         </div>
-        <div class="r12" onclick="plusOne()" style="color: rgb(255, 255, 255); grid-column: 13 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+        <div class="r12" style="color: rgb(255, 255, 255); grid-column: 13 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
           <div class="element1" style="height: 55px; width: 100%;">
             <div class="square">
               <p style="margin: 0;">nākamie desmit gadi</p>
