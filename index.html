@@ -67,6 +67,8 @@
         border: 2px solid;
         background: rgb(0, 0, 0);
         padding: 10px;
+        min-height: 220px;
+        overflow: auto;
       }
 
       .atomic-number {
@@ -110,17 +112,563 @@
 
 
     <!--year changes-->
-    <script>
-      let i = 1
-      function minusOne() {
-        i--
-        console.log(i)
+    <style>
+      #H {
+        display: none;
       }
 
-      function plusOne() {
-        i++
-        console.log(i)
+      #Li {
+        display: none;
       }
+
+      #Na {
+        display: none;
+      }
+      
+      #K {
+        display: none;
+      }
+      
+      #Rb {
+        display: none;
+      }
+      
+      #Cs {
+        display: none;
+      }
+      
+      #Fr {
+        display: none;
+      }
+      
+      #Be {
+        display: none;
+      }
+      
+      #Mg {
+        display: none;
+      }
+      
+      #Ca {
+        display: none;
+      }
+      
+      #Sr {
+        display: none;
+      }
+      
+      #Ba {
+        display: none;
+      }
+      
+      #Ra {
+        display: none;
+      }
+      
+      #Sc {
+        display: none;
+      }
+      
+      #Y {
+        display: none;
+      }
+      
+      #Ti {
+        display: none;
+      }
+      
+      #Zr {
+        display: none;
+      }
+      
+      #Hf {
+        display: none;
+      }
+      
+      #Rf {
+        display: none;
+      }
+      
+      #V {
+        display: none;
+      }
+      
+      #Nb {
+        display: none;
+      }
+      
+      #Ta {
+        display: none;
+      }
+      
+      #Db {
+        display: none;
+      }
+      
+      #Cr {
+        display: none;
+      }
+      
+      #Mo {
+        display: none;
+      }
+      
+      #W {
+        display: none;
+      }
+      
+      #Sg {
+        display: none;
+      }
+      
+      #Mn {
+        display: none;
+      }
+      
+      #Tc {
+        display: none;
+      }
+      
+      #Re {
+        display: none;
+      }
+      
+      #Bh {
+        display: none;
+      }
+      
+      #Fe {
+        display: none;
+      }
+      
+      #Ru {
+        display: none;
+      }
+      
+      #Os {
+        display: none;
+      }
+      
+      #Hs {
+        display: none;
+      }
+      
+      #Co {
+        display: none;
+      }
+      
+      #Rh {
+        display: none;
+      }
+      
+      #Ir {
+        display: none;
+      }
+      
+      #Mt {
+        display: none;
+      }
+      
+      #Ni {
+        display: none;
+      }
+      
+      #Pd {
+        display: none;
+      }
+      
+      #Pt {
+        display: none;
+      }
+      
+      #Ds {
+        display: none;
+      }
+      
+      #Cu {
+        display: none;
+      }
+      
+      #Ag {
+        display: none;
+      }
+      
+      #Au {
+        display: none;
+      }
+      
+      #Rg {
+        display: none;
+      }
+      
+      #Zn {
+        display: none;
+      }
+      
+      #Cd {
+        display: none;
+      }
+      
+      #Hg {
+        display: none;
+      }
+      
+      #Cn {
+        display: none;
+      }
+      
+      #B {
+        display: none;
+      }
+      
+      #Al {
+        display: none;
+      }
+      
+      #Ga {
+        display: none;
+      }
+      
+      #In {
+        display: none;
+      }
+      
+      #Tl {
+        display: none;
+      }
+      
+      #Nh {
+        display: none;
+      }
+      
+      #C {
+        display: none;
+      }
+      
+      #Si {
+        display: none;
+      }
+      
+      #Ge {
+        display: none;
+      }
+      
+      #Sn {
+        display: none;
+      }
+      
+      #Pb {
+        display: none;
+      }
+      
+      #Fl {
+        display: none;
+      }
+      
+      #N {
+        display: none;
+      }
+      
+      #P {
+        display: none;
+      }
+      
+      #As {
+        display: none;
+      }
+      
+      #Sb {
+        display: none;
+      }
+      
+      #Bi {
+        display: none;
+      }
+      
+      #Mc {
+        display: none;
+      }
+      
+      #O {
+        display: none;
+      }
+      
+      #S {
+        display: none;
+      }
+      
+      #Se {
+        display: none;
+      }
+      
+      #Te {
+        display: none;
+      }
+      
+      #Po {
+        display: none;
+      }
+      
+      #Lv {
+        display: none;
+      }
+      
+      #F {
+        display: none;
+      }
+      
+      #Cl {
+        display: none;
+      }
+      
+      #Br {
+        display: none;
+      }
+      
+      #I {
+        display: none;
+      }
+      
+      #At {
+        display: none;
+      }
+      
+      #Ts {
+        display: none;
+      }
+      
+      #He {
+        display: none;
+      }
+      
+      #Ne {
+        display: none;
+      }
+      
+      #Ar {
+        display: none;
+      }
+      
+      #Kr {
+        display: none;
+      }
+      
+      #Xe {
+        display: none;
+      }
+      
+      #Rn {
+        display: none;
+      }
+      
+      #Og {
+        display: none;
+      }
+      
+      #La {
+        display: none;
+      }
+      
+      #Ac {
+        display: none;
+      }
+      
+      #Ce {
+        display: none;
+      }
+      
+      #Th {
+        display: none;
+      }
+      
+      #Pr {
+        display: none;
+      }
+      
+      #Pa {
+        display: none;
+      }
+      
+      #Nd {
+        display: none;
+      }
+      
+      #U {
+        display: none;
+      }
+      
+      #Pm {
+        display: none;
+      }
+      
+      #Np {
+        display: none;
+      }
+      
+      #Sm {
+        display: none;
+      }
+      
+      #Pu {
+        display: none;
+      }
+      
+      #Eu {
+        display: none;
+      }
+      
+      #Am {
+        display: none;
+      }
+      
+      #Gd {
+        display: none;
+      }
+
+      #Cm {
+        display: none;
+      }
+      
+      #Tb {
+        display: none;
+      }
+      
+      #Bk {
+        display: none;
+      }
+      
+      #Dy {
+        display: none;
+      }
+      
+      #Cf {
+        display: none;
+      }
+      
+      #Ho {
+        display: none;
+      }
+      
+      #Es {
+        display: none;
+      }
+      
+      #Er {
+        display: none;
+      }
+      
+      #Fm {
+        display: none;
+      }
+      
+      #Tm {
+        display: none;
+      }
+      
+      #Md {
+        display: none;
+      }
+      
+      #Yb {
+        display: none;
+      }
+      
+      #No {
+        display: none;
+      }
+
+      #Lu {
+        display: none;
+      }
+
+      #Lr {
+        display: none;
+      }
+
+    </style>
+
+    <script>
+      let i = 0;
+
+      function minusOne() {
+        i--;
+        updateYear();
+        console.log(i);
+      }
+    
+      function plusOne() {
+        i++;
+        updateYear();
+        console.log(i);
+      }
+    
+      function updateYear() {
+        if(i === 0) {
+          document.getElementById("previousYear").innerHTML = "";
+          document.getElementById("currentYear").innerHTML = "";
+          document.getElementById("nextYear").innerHTML = "līdz 1000 g.p.m.ē.";
+          document.getElementById('Au').style.display = 'none';
+          document.getElementById('Ag').style.display = 'none';
+          document.getElementById('Cu').style.display = 'none';
+          document.getElementById('Fe').style.display = 'none';
+          document.getElementById('Pb').style.display = 'none';
+          document.getElementById('Sn').style.display = 'none';
+          document.getElementById('Hg').style.display = 'none';
+          document.getElementById('S').style.display = 'none';
+          document.getElementById('C').style.display = 'none';
+        } else if(i === 1) {
+          document.getElementById("previousYear").innerHTML = "";
+          document.getElementById("currentYear").innerHTML = "līdz 1000 g.p.m.ē.";
+          document.getElementById("nextYear").innerHTML = "no 1000 g.p.m.ē. līdz 1735 gadam";
+          document.getElementById("changes").innerHTML = `
+            <div>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Paraugs-[Elemnta simbols] Elementa nosaukums (Atomnumurs) (Persona kas atklāja elemntu; Gads kad atklāja)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Au] Zelts (197)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Ag] Sudrabs (108)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Cu] Varš (63)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Fe] Dzelzs(56)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Pb] Svins(207)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Sn] Alva(119)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Hg] Dzīvsudrabs (201)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[S] Sērs (32)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[C] Ogleklis (12)</p>
+            </div>
+          `;
+          document.getElementById('Au').style.display = 'block';
+          document.getElementById('Ag').style.display = 'block';
+          document.getElementById('Cu').style.display = 'block';
+          document.getElementById('Fe').style.display = 'block';
+          document.getElementById('Pb').style.display = 'block';
+          document.getElementById('Sn').style.display = 'block';
+          document.getElementById('Hg').style.display = 'block';
+          document.getElementById('S').style.display = 'block';
+          document.getElementById('C').style.display = 'block';
+          document.getElementById('As').style.display = 'none';
+          document.getElementById('Zn').style.display = 'none';
+          document.getElementById('Sb').style.display = 'none';
+          document.getElementById('P').style.display = 'none';
+        } else if (i === 2) {
+          document.getElementById("previousYear").innerHTML = "līdz 1000 g.p.m.ē.";
+          document.getElementById("currentYear").innerHTML = "no 1000 g.p.m.ē. līdz 1735 gadam";
+          document.getElementById("nextYear").innerHTML = "no 1735 līdz 1745 gadam";
+          document.getElementById("changes").innerHTML = `
+            <div>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Paraugs-[Elemnta simbols] Elementa nosaukums (Atomnumurs) (Persona kas atklāja elemntu; Gads kad atklāja)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[As] Arsēns (75)  (Magnus ~1250)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Zn] Cinks (65)(13. gadsimtā Indijā)</p> 
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Sb] Antimons (122)(17. gadsimta sākumā)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[P] Fosfors (31)(Brand 1669)</p>
+            </div>
+          `;
+          document.getElementById('As').style.display = 'block';
+          document.getElementById('Zn').style.display = 'block';
+          document.getElementById('Sb').style.display = 'block';
+          document.getElementById('P').style.display = 'block';
+        }
+      }
+      
 
     </script>
 
@@ -250,20 +798,24 @@
         grid-row: 14;
         height: 100%;
       }
-      
 
       .r13 {
         grid-row: 15;
-        height: 32px;
+        height: 100%;
       }
+      
 
       .r14 {
         grid-row: 16;
-        height: 220px;
+        height: 32px;
       }
 
       .r15 {
         grid-row: 17;
+      }
+
+      .r16 {
+        grid-row: 18;
         height: 110px;
       }
 
@@ -358,7 +910,6 @@
     <br>
     <!--website title-->
     <title>ĶĪMISKO ELEMENTU PERIODISKĀ TABULA</title>
-
 
 
     <!--grid-->
@@ -2569,8 +3120,8 @@
           <div class="r0"></div>
           <div class="r8"></div>
           <div class="r11"></div>
-          <div class="r13"></div>
-          <div class="r15"></div>
+          <div class="r14"></div>
+          <div class="r16"></div>
           <div class="c-1"></div>
           <div class="c19"></div>
           
@@ -2756,35 +3307,68 @@
           
 
           <!--year interval-->
-          <div onclick="minusOne()" class="r12" style="color: rgb(255, 255, 255); grid-column: 7 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+          <div class="r12" style="color: rgb(255, 255, 255); grid-column: 7 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
             <div class="element" style="height: 55px; width: 100%;">
               <div class="square">
-              <p style="margin: 0; font-size: medium;">iepriekšējie desmit gadi</p> 
+              <p style="margin: 0; font-size: medium;">iepriekšējās izmaiņas</p> 
               </div>
             </div>
           </div>
           <div class="r12" style="color: rgb(255, 255, 255); grid-column: 10 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
             <div class="element" style="height: 55px; width: 100%;">
               <div class="square">
-              <p style="margin: 0; font-size: medium;">current year (1965-1975)</p> 
+              <p style="margin: 0; font-size: medium;">šobrīdējais laika posms</p> 
               </div>
             </div>
           </div>
-          <div onclick="plusOne()" class="r12" style="color: rgb(255, 255, 255); grid-column: 13 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+          <div class="r12" style="color: rgb(255, 255, 255); grid-column: 13 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
             <div class="element" style="height: 55px; width: 100%;">
               <div class="square">
-                <p style="margin: 0; font-size: medium;">nākamie desmit gadi</p>
+                <p style="margin: 0; font-size: medium;">nākošās izmaiņas</p>
               </div>
             </div>
           </div>
 
 
+
+          <div onclick="minusOne()" class="r13" style="cursor: pointer; color: rgb(255, 255, 255); grid-column: 7 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+            <div class="element" style="height: 55px; width: 100%;">
+              <div class="square">
+              <p style="margin: 0; font-size: medium;" id="previousYear"></p> 
+              </div>
+            </div>
+          </div>
+          <div class="r13" style="color: rgb(255, 255, 255); grid-column: 10 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+            <div class="element" style="height: 55px; width: 100%;">
+              <div class="square">
+              <p style="margin: 0; font-size: medium;" id="currentYear"></p> 
+              </div>
+            </div>
+          </div>
+          <div onclick="plusOne()" class="r13" style="cursor: pointer; color: rgb(255, 255, 255); grid-column: 13 / span 3; display: flex; align-items: center; justify-content: center; height: 100%;">
+            <div class="element" style="height: 55px; width: 100%;">
+              <div class="square">
+                <p style="margin: 0; font-size: medium;" id="nextYear">līdz 1000 g.p.m.ē.</p>
+              </div>
+            </div>
+          </div>
+  
+
           <!--year changes-->
-          <div class="r14" style="color: rgb(255, 255, 255); grid-column: 6 / span 11;">
+          <div class="r15" style="color: rgb(255, 255, 255); grid-column: 6 / span 11;">
             <div class="element" style=" height: 100%;">
-              <div class="square3">
-                <p style="font-size: medium; color: rgb(255, 255, 255);">Dubnium (L Berkeley Lab, USA - Dubna Lab, Russia 1967)</p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">Seaborgium (L Berkeley Lab, USA - Dubna Lab, Russia 1974)</p>
+              <div class="square3" id="changes">
+                <p style="font-size: medium; color: rgb(255, 255, 255);">Paraugs-[Elemnta simbols] Elementa nosaukums (Atomnumurs) (Persona kas atklāja elemntu; Gads kad atklāja)</p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">[Au] Zelts (197)</p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">[Ag] Sudrabs (108)<p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">[Cu] Varš (63)<p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">[Fe] Dzelzs(56)<p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">[Pb] Svins(207)<p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">[Sn] Alva(119)<p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">[Hg] Dzīvsudrabs (201)<p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">[S] Sērs (32)<p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">[C] Ogleklis (12)<p>
               </div>
             </div>
           </div>
