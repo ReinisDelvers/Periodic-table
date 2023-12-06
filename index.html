@@ -607,6 +607,12 @@
           document.getElementById("previousYear").innerHTML = "";
           document.getElementById("currentYear").innerHTML = "";
           document.getElementById("nextYear").innerHTML = "līdz 1000 g.p.m.ē.";
+          document.getElementById("changes").innerHTML = `
+            <div>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementa paraugs-[Simbols] Nosaukums (Atomnumurs) (Persona kas atklāja; Gads kad atklāja; Kur atklāja)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>  
+            </div>
+          `;
           document.getElementById('Au').style.display = 'none';
           document.getElementById('Ag').style.display = 'none';
           document.getElementById('Cu').style.display = 'none';
@@ -619,20 +625,20 @@
         } else if(i === 1) {
           document.getElementById("previousYear").innerHTML = "";
           document.getElementById("currentYear").innerHTML = "līdz 1000 g.p.m.ē.";
-          document.getElementById("nextYear").innerHTML = "no 1000 g.p.m.ē. līdz 1735 gadam";
+          document.getElementById("nextYear").innerHTML = "no 1000. g.p.m.ē. līdz 1735. gadam";
           document.getElementById("changes").innerHTML = `
             <div>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">Paraugs-[Elemnta simbols] Elementa nosaukums (Atomnumurs) (Persona kas atklāja elemntu; Gads kad atklāja)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementa paraugs-[Simbols] Nosaukums (Atomnumurs) (Persona kas atklāja; Gads kad atklāja; Kur atklāja)</p>
               <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[Au] Zelts (197)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[Ag] Sudrabs (108)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[Cu] Varš (63)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[Fe] Dzelzs(56)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[Pb] Svins(207)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[Sn] Alva(119)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[Hg] Dzīvsudrabs (201)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[S] Sērs (32)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[C] Ogleklis (12)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Au] Zelts (79)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Ag] Sudrabs (47)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Cu] Varš (29)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Fe] Dzelzs (26)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Pb] Svins (82)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Sn] Alva (50)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Hg] Dzīvsudrabs (80)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[S] Sērs (16)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[C] Ogleklis (6)</p>
             </div>
           `;
           document.getElementById('Au').style.display = 'block';
@@ -650,22 +656,78 @@
           document.getElementById('P').style.display = 'none';
         } else if (i === 2) {
           document.getElementById("previousYear").innerHTML = "līdz 1000 g.p.m.ē.";
-          document.getElementById("currentYear").innerHTML = "no 1000 g.p.m.ē. līdz 1735 gadam";
-          document.getElementById("nextYear").innerHTML = "no 1735 līdz 1745 gadam";
+          document.getElementById("currentYear").innerHTML = "no 1000 g.p.m.ē. līdz 1735. gadam";
+          document.getElementById("nextYear").innerHTML = "no 1735. līdz 1745. gadam";
           document.getElementById("changes").innerHTML = `
             <div>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">Paraugs-[Elemnta simbols] Elementa nosaukums (Atomnumurs) (Persona kas atklāja elemntu; Gads kad atklāja)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementa paraugs-[Simbols] Nosaukums (Atomnumurs) (Persona kas atklāja; Gads kad atklāja; Kur atklāja)</p>
               <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[As] Arsēns (75)  (Magnus ~1250)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[Zn] Cinks (65)(13. gadsimtā Indijā)</p> 
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[Sb] Antimons (122)(17. gadsimta sākumā)</p>
-              <p style="font-size: medium; color: rgb(255, 255, 255);">[P] Fosfors (31)(Brand 1669)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[As] Arsēns (33) (Magnus; aptuveni 1250. gadā)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Zn] Cinks (30) (13. gadsimtā; Indijā)</p> 
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Sb] Antimons (51) (17. gadsimta sākumā)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[P] Fosfors (15) (Brand; 1669. gadā)</p>
             </div>
           `;
           document.getElementById('As').style.display = 'block';
           document.getElementById('Zn').style.display = 'block';
           document.getElementById('Sb').style.display = 'block';
-          document.getElementById('P').style.display = 'block';
+          document.getElementById('Co').style.display = 'none';
+          document.getElementById('Pt').style.display = 'none';
+        } else if (i === 3) {
+          document.getElementById("previousYear").innerHTML = "no 1000 g.p.m.ē. līdz 1735. gadam";
+          document.getElementById("currentYear").innerHTML = "no 1735. līdz 1745. gadam";
+          document.getElementById("nextYear").innerHTML = "no 1745. līdz 1755. gadam";
+          document.getElementById("changes").innerHTML = `
+            <div>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementa paraugs-[Simbols] Nosaukums (Atomnumurs) (Persona kas atklāja; Gads kad atklāja; Kur atklāja)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Co] Kobalts (27) (Brandt; aptuveni 1735. gadā)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Pt] Platīns (78) (Ulloa; 1735. gadā)</p>
+            </div>
+          `;
+          document.getElementById('Co').style.display = 'block';
+          document.getElementById('Pt').style.display = 'block';
+          document.getElementById('Ni').style.display = 'none';
+          document.getElementById('Bi').style.display = 'none';
+        } else if (i === 4) {
+          document.getElementById("previousYear").innerHTML = "no 1735. līdz 1745. gadam";
+          document.getElementById("currentYear").innerHTML = "no 1745. līdz 1755. gadam";
+          document.getElementById("nextYear").innerHTML = "no 1765. līdz 1775. gadam";
+          document.getElementById("changes").innerHTML = `
+            <div>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementa paraugs-[Simbols] Nosaukums (Atomnumurs) (Persona kas atklāja; Gads kad atklāja; Kur atklāja)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Ni] Niķelis (28) (Cronstedt; 1751. gadā)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Bi] Bismuts (83) (Geoffroy; 1753. gadā)</p>
+            </div>
+          `;
+          document.getElementById('Ni').style.display = 'block';
+          document.getElementById('Bi').style.display = 'block';
+          document.getElementById('H').style.display = 'none';
+          document.getElementById('N').style.display = 'none';
+          document.getElementById('O').style.display = 'none';
+          document.getElementById('Cl').style.display = 'none';
+          document.getElementById('Mn').style.display = 'none';
+        } else if (i === 5) {
+          document.getElementById("previousYear").innerHTML = "no 1745. līdz 1755. gadam";
+          document.getElementById("currentYear").innerHTML = "no 1765. līdz 1775. gadam";
+          document.getElementById("nextYear").innerHTML = "no 1775. līdz 1785. gadam";
+          document.getElementById("changes").innerHTML = `
+            <div>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementa paraugs-[Simbols] Nosaukums (Atomnumurs) (Persona kas atklāja; Gads kad atklāja; Kur atklāja)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[H] Ūdeņradis (1) (Cavendish; 1766. gadā)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[N] Slāpeklis (7) (Rutherford; 1772. gadā)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[O] Skābeklis (8) (Priestley; Scheele; 1774. gadā)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Cl] Hlors (17) (Scheele; 1774. gadā)</p>
+              <p style="font-size: medium; color: rgb(255, 255, 255);">[Mn] Mangāns (25) (Gahn, Scheele, & Bergman; 1774. gadā)</p>
+            </div>
+          `;
+          document.getElementById('H').style.display = 'block';
+          document.getElementById('N').style.display = 'block';
+          document.getElementById('O').style.display = 'block';
+          document.getElementById('Cl').style.display = 'block';
+          document.getElementById('Mn').style.display = 'block';
         }
       }
       
@@ -3358,17 +3420,8 @@
           <div class="r15" style="color: rgb(255, 255, 255); grid-column: 6 / span 11;">
             <div class="element" style=" height: 100%;">
               <div class="square3" id="changes">
-                <p style="font-size: medium; color: rgb(255, 255, 255);">Paraugs-[Elemnta simbols] Elementa nosaukums (Atomnumurs) (Persona kas atklāja elemntu; Gads kad atklāja)</p>
+                <p style="font-size: medium; color: rgb(255, 255, 255);">Elementa paraugs-[Simbols] Nosaukums (Atomnumurs) (Persona kas atklāja; Gads kad atklāja; Kur atklāja)</p>
                 <p style="font-size: medium; color: rgb(255, 255, 255);">Elementi kas tika atklāti:</p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">[Au] Zelts (197)</p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">[Ag] Sudrabs (108)<p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">[Cu] Varš (63)<p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">[Fe] Dzelzs(56)<p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">[Pb] Svins(207)<p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">[Sn] Alva(119)<p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">[Hg] Dzīvsudrabs (201)<p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">[S] Sērs (32)<p>
-                <p style="font-size: medium; color: rgb(255, 255, 255);">[C] Ogleklis (12)<p>
               </div>
             </div>
           </div>
